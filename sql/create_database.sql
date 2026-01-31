@@ -9,7 +9,7 @@ CREATE TABLE campuses(
     state VARCHAR(2) NOT NULL
 );
 
--- Locations Table
+-- Locations Table 
 CREATE TABLE locations(
     location_id INT AUTO_INCREMENT PRIMARY KEY,
     campus_id INT NOT NULL,
