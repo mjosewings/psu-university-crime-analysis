@@ -1,0 +1,727 @@
+"""
+Penn State Daily Crime Log Scraper (Fixed & Enhanced)
+Scrapes https://www.police.psu.edu/daily-crime-log for all campuses
+and builds a SQLite database with the results.
+
+Usage:
+    python3 psu_crime_scraper_fixed.py              # scrape last 30 days (default)
+    python3 psu_crime_scraper_fixed.py --days 60   # scrape last 60 days
+    python3 psu_crime_scraper_fixed.py --campus "University Park"  # specific campus
+    python3 psu_crime_scraper_fixed.py --debug     # enable debug output
+"""
+
+import sqlite3
+import re
+import json
+import sys
+import time
+import logging
+from datetime import datetime, timedelta
+from pathlib import Path
+
+import requests
+from bs4 import BeautifulSoup
+
+# ── Configuration ──────────────────────────────────────────────────────────
+
+BASE_URL = "https://www.police.psu.edu/daily-crime-log"
+DB_PATH = "psu_crime_log.db"
+DEBUG_HTML_DIR = Path("debug_html")
+
+CAMPUSES = {
+    "Univ Park":     "University Park",
+    "Abington":      "Abington",
+    "Altoona":       "Altoona",
+    "Beaver":        "Beaver",
+    "Behrend":       "Erie (Behrend)",
+    "Berks":         "Berks",
+    "Brandywine":    "Brandywine",
+    "Dickinson Law": "Dickinson Law",
+    "DuBois":        "DuBois",
+    "Fayette":       "Fayette",
+    "Grtr Algny":    "Greater Allegheny",
+    "Grt Valley":    "Great Valley",
+    "Harrisburg":    "Harrisburg",
+    "Hazleton":      "Hazleton",
+    "Hershey":       "Hershey",
+    "Lehigh Val":    "Lehigh Valley",
+    "Mont Alto":     "Mont Alto",
+    "New Ken":       "New Kensington",
+    "Schuylkill":    "Schuylkill",
+    "Shenango":      "Shenango",
+    "Wlks-Barre":    "Wilkes-Barre",
+    "Wrthn Scrn":    "Worthington Scranton",
+    "York":          "York",
+}
+
+# Campus code mapping for incident numbers
+CAMPUS_CODES = {
+    "UP": "University Park",
+    "AB": "Abington",
+    "AL": "Altoona",
+    "BK": "Beaver",
+    "BE": "Erie (Behrend)",
+    "BR": "Berks",
+    "BW": "Brandywine",
+    "DL": "Dickinson Law",
+    "DB": "DuBois",
+    "FA": "Fayette",
+    "GA": "Greater Allegheny",
+    "GV": "Great Valley",
+    "HB": "Harrisburg",
+    "HZ": "Hazleton",
+    "HS": "Hershey",
+    "LV": "Lehigh Valley",
+    "MA": "Mont Alto",
+    "NK": "New Kensington",
+    "SK": "Schuylkill",
+    "SH": "Shenango",
+    "WB": "Wilkes-Barre",
+    "WS": "Worthington Scranton",
+    "YK": "York",
+}
+
+# Reverse mapping
+CAMPUS_NAME_TO_CODE = {v: k for k, v in CAMPUS_CODES.items()}
+
+# ── Logging Setup ──────────────────────────────────────────────────────────
+
+def setup_logging(debug=False):
+    """Configure logging based on debug flag."""
+    level = logging.DEBUG if debug else logging.INFO
+    logging.basicConfig(
+        level=level,
+        format='%(asctime)s [%(levelname)s] %(message)s',
+        datefmt='%H:%M:%S'
+    )
+    return logging.getLogger(__name__)
+
+logger = logging.getLogger(__name__)
+
+# ── Parsing ────────────────────────────────────────────────────────────────
+
+def save_debug_html(html: str, campus: str, page: int):
+    """Save HTML to file for debugging."""
+    DEBUG_HTML_DIR.mkdir(exist_ok=True)
+    filepath = DEBUG_HTML_DIR / f"{campus.replace(' ', '_')}_page{page}.html"
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(html)
+    logger.debug(f"Saved debug HTML to {filepath}")
+
+def parse_incidents(html: str, campus_label: str, debug=False) -> list[dict]:
+    """
+    Parse incident records from the crime log HTML page.
+
+    The page structure uses .views-row for each incident.
+    Each incident contains various fields we need to extract.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    incidents = []
+
+    # Try multiple possible selectors
+    selectors = [
+        ".views-row",
+        "div.views-row",
+        ".view-content .views-row",
+        "article",
+        ".node",
+    ]
+
+    blocks = []
+    for selector in selectors:
+        blocks = soup.select(selector)
+        if blocks:
+            logger.debug(f"Found {len(blocks)} blocks using selector: {selector}")
+            break
+
+    if not blocks:
+        logger.warning(f"No incident blocks found for {campus_label}")
+        # Try to find any divs with incident-like content
+        blocks = soup.find_all('div', class_=lambda x: x and 'view' in x.lower())
+        logger.debug(f"Fallback: found {len(blocks)} potential blocks")
+
+        if debug and not blocks:
+            # Print some of the HTML for debugging
+            logger.debug("HTML preview:")
+            logger.debug(soup.prettify()[:2000])
+
+    for idx, block in enumerate(blocks):
+        incident = {
+            "campus": campus_label,
+            "incident_number": "",
+            "campus_code": CAMPUS_NAME_TO_CODE.get(campus_label, ""),
+        }
+
+        # Get all text content
+        text = block.get_text(separator="\n", strip=True)
+        lines = [line.strip() for line in text.split("\n") if line.strip()]
+
+        if debug and idx == 0:
+            logger.debug(f"First incident raw text:\n{text[:500]}")
+
+        field_map = {}
+
+        # Parse each line looking for field patterns
+        for line in lines:
+            # Incident Number
+            if re.search(r'INCIDENT\s*#', line, re.IGNORECASE):
+                match = re.search(r'INCIDENT\s*#?\s*:?\s*(\S+)', line, re.IGNORECASE)
+                if match:
+                    incident["incident_number"] = match.group(1)
+                    # Extract campus code from incident number (e.g., "24UP12345" -> "UP")
+                    code_match = re.match(r'\d{2}([A-Z]{2,3})\d+', match.group(1))
+                    if code_match:
+                        incident["campus_code"] = code_match.group(1)
+
+            # Reported date/time
+            if re.match(r'^Reported\s*:', line, re.IGNORECASE):
+                match = re.match(r'^Reported\s*:\s*(.+)$', line, re.IGNORECASE)
+                if match:
+                    field_map["Reported"] = match.group(1).strip()
+
+            # Occurred date/time
+            if re.match(r'^Occurred\s*:', line, re.IGNORECASE):
+                match = re.match(r'^Occurred\s*:\s*(.+)$', line, re.IGNORECASE)
+                if match:
+                    field_map["Occurred"] = match.group(1).strip()
+
+            # Nature of Incident
+            if re.match(r'^Nature of Incident\s*:', line, re.IGNORECASE):
+                match = re.match(r'^Nature of Incident\s*:\s*(.+)$', line, re.IGNORECASE)
+                if match:
+                    field_map["Nature"] = match.group(1).strip()
+
+            # Offenses
+            if re.match(r'^Offenses?\s*:', line, re.IGNORECASE):
+                match = re.match(r'^Offenses?\s*:\s*(.+)$', line, re.IGNORECASE)
+                if match:
+                    field_map["Offenses"] = match.group(1).strip()
+
+            # Location
+            if re.match(r'^Location\s*:', line, re.IGNORECASE):
+                match = re.match(r'^Location\s*:\s*(.+)$', line, re.IGNORECASE)
+                if match:
+                    field_map["Location"] = match.group(1).strip()
+
+        # Sometimes offenses are on multiple lines after "Offenses:"
+        # We need to handle multi-line field values
+        offense_lines = []
+        in_offenses = False
+        for line in lines:
+            if re.match(r'^Offenses?\s*:', line, re.IGNORECASE):
+                in_offenses = True
+                # Get the part after the colon
+                parts = line.split(':', 1)
+                if len(parts) > 1 and parts[1].strip():
+                    offense_lines.append(parts[1].strip())
+            elif in_offenses:
+                # Check if this is a new field
+                if re.match(r'^(Reported|Occurred|Nature|Location|INCIDENT)\s*:', line, re.IGNORECASE):
+                    in_offenses = False
+                else:
+                    # This is a continuation of offenses
+                    offense_lines.append(line)
+
+        if offense_lines:
+            field_map["Offenses"] = "\n".join(offense_lines)
+
+        # Update incident with parsed fields
+        incident.update({
+            "reported_datetime":  field_map.get("Reported", ""),
+            "occurred_datetime":  field_map.get("Occurred", ""),
+            "nature_of_incident": field_map.get("Nature", ""),
+            "offenses":           field_map.get("Offenses", ""),
+            "location":           field_map.get("Location", ""),
+        })
+
+        # Only add if we have at least some data
+        if any([
+            incident.get("incident_number"),
+            incident.get("reported_datetime"),
+            incident.get("nature_of_incident")
+        ]):
+            incidents.append(incident)
+        else:
+            logger.debug(f"Skipping empty incident block: {text[:100]}")
+
+    return incidents
+
+# ── Scraping ───────────────────────────────────────────────────────────────
+
+def scrape_campus(campus_filter: str, campus_label: str,
+                  start_date: str = None, end_date: str = None,
+                  session: requests.Session = None,
+                  max_pages: int = 100,
+                  debug: bool = False) -> list[dict]:
+    """Scrape all pages for a given campus filter."""
+    s = session or requests.Session()
+    s.headers.update({
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5",
+    })
+
+    all_incidents = []
+    page = 0
+    consecutive_empty = 0
+    max_consecutive_empty = 3
+
+    while page < max_pages:
+        params = {"campus": campus_filter, "page": page}
+        if start_date:
+            params["field_reported_date_value[min]"] = start_date
+        if end_date:
+            params["field_reported_date_value[max]"] = end_date
+
+        try:
+            logger.info(f"  Fetching page {page}...")
+            resp = s.get(BASE_URL, params=params, timeout=30)
+            resp.raise_for_status()
+
+            if debug:
+                save_debug_html(resp.text, campus_label, page)
+
+            # Check if we got a valid response
+            if len(resp.text) < 500:
+                logger.warning(f"  Suspiciously short response ({len(resp.text)} bytes)")
+                break
+
+        except requests.exceptions.Timeout:
+            logger.error(f"  ⚠️  Timeout fetching {campus_label} page {page}")
+            break
+        except requests.exceptions.RequestException as e:
+            logger.error(f"  ⚠️  Error fetching {campus_label} page {page}: {e}")
+            break
+
+        incidents = parse_incidents(resp.text, campus_label, debug=debug)
+
+        if not incidents:
+            consecutive_empty += 1
+            logger.info(f"  Page {page}: No incidents found (empty count: {consecutive_empty})")
+            if consecutive_empty >= max_consecutive_empty:
+                logger.info(f"  Stopping after {consecutive_empty} consecutive empty pages")
+                break
+        else:
+            consecutive_empty = 0
+            all_incidents.extend(incidents)
+            logger.info(f"  Page {page}: Found {len(incidents)} incidents (total: {len(all_incidents)})")
+
+            if debug and incidents:
+                logger.debug(f"  Sample incident: {json.dumps(incidents[0], indent=2)}")
+
+        page += 1
+        time.sleep(1.0)  # Be nice to the server
+
+    return all_incidents
+
+def scrape_all_campuses(days_back: int = 30, specific_campus: str = None, debug: bool = False) -> list[dict]:
+    """Scrape the last N days for ALL campuses (or a specific one)."""
+    end_dt    = datetime.now()
+    start_dt  = end_dt - timedelta(days=days_back)
+    start_str = start_dt.strftime("%m/%d/%Y")
+    end_str   = end_dt.strftime("%m/%d/%Y")
+
+    logger.info(f"📅 Date range: {start_str} → {end_str}")
+
+    session     = requests.Session()
+    all_records = []
+
+    # Filter to specific campus if requested
+    campuses_to_scrape = CAMPUSES.items()
+    if specific_campus:
+        # Find matching campus
+        matched = False
+        for filter_code, label in CAMPUSES.items():
+            if specific_campus.lower() in label.lower():
+                campuses_to_scrape = [(filter_code, label)]
+                matched = True
+                break
+        if not matched:
+            logger.error(f"Campus '{specific_campus}' not found!")
+            return []
+
+    for filter_code, label in campuses_to_scrape:
+        logger.info(f"\n🏫 Scraping: {label} ({filter_code})")
+        records = scrape_campus(filter_code, label, start_str, end_str, session, debug=debug)
+        logger.info(f"  ✅ {len(records)} total incidents")
+        all_records.extend(records)
+
+        # Small delay between campuses
+        time.sleep(2.0)
+
+    return all_records
+
+# ── Database ───────────────────────────────────────────────────────────────
+
+CREATE_CAMPUSES_SQL = """
+CREATE TABLE IF NOT EXISTS campuses (
+    campus_id    INTEGER PRIMARY KEY AUTOINCREMENT,
+    campus_code  TEXT NOT NULL UNIQUE,
+    campus_name  TEXT NOT NULL
+);
+"""
+
+CREATE_INCIDENTS_SQL = """
+CREATE TABLE IF NOT EXISTS incidents (
+    id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+    incident_number     TEXT UNIQUE,
+    campus_id           INTEGER REFERENCES campuses(campus_id),
+    reported_datetime   TEXT,
+    occurred_start      TEXT,
+    occurred_end        TEXT,
+    nature_of_incident  TEXT,
+    location            TEXT,
+    created_at          TEXT DEFAULT CURRENT_TIMESTAMP
+);
+"""
+
+CREATE_OFFENSES_SQL = """
+CREATE TABLE IF NOT EXISTS offense_types (
+    offense_id   INTEGER PRIMARY KEY AUTOINCREMENT,
+    offense_code TEXT NOT NULL UNIQUE,
+    description  TEXT
+);
+"""
+
+CREATE_INCIDENT_OFFENSES_SQL = """
+CREATE TABLE IF NOT EXISTS incident_offenses (
+    incident_id INTEGER REFERENCES incidents(id),
+    offense_id  INTEGER REFERENCES offense_types(offense_id),
+    PRIMARY KEY (incident_id, offense_id)
+);
+"""
+
+CREATE_VIEWS_SQL = [
+    """
+    CREATE VIEW IF NOT EXISTS v_incidents_full AS
+    SELECT
+        i.id,
+        i.incident_number,
+        c.campus_name AS campus,
+        i.reported_datetime,
+        i.occurred_start,
+        i.occurred_end,
+        i.nature_of_incident,
+        i.location,
+        (
+            SELECT GROUP_CONCAT(ot.offense_code, ' | ')
+            FROM incident_offenses io
+            JOIN offense_types ot ON ot.offense_id = io.offense_id
+            WHERE io.incident_id = i.id
+        ) AS offenses
+    FROM incidents i
+    JOIN campuses c ON i.campus_id = c.campus_id;
+    """,
+    """
+    CREATE VIEW IF NOT EXISTS v_incidents_by_campus AS
+    SELECT
+        c.campus_name,
+        COUNT(*)                 AS total_incidents,
+        MIN(i.reported_datetime) AS earliest_report,
+        MAX(i.reported_datetime) AS latest_report
+    FROM incidents i
+    JOIN campuses c ON i.campus_id = c.campus_id
+    GROUP BY c.campus_name
+    ORDER BY total_incidents DESC;
+    """,
+    """
+    CREATE VIEW IF NOT EXISTS v_top_offenses AS
+    SELECT
+        ot.offense_code,
+        COUNT(*) AS frequency
+    FROM incident_offenses io
+    JOIN offense_types ot ON ot.offense_id = io.offense_id
+    GROUP BY ot.offense_code
+    ORDER BY frequency DESC;
+    """,
+]
+
+CAMPUS_SEED = [
+    (code, name) for code, name in CAMPUS_CODES.items()
+]
+
+def build_database(records: list[dict], db_path: str = DB_PATH) -> sqlite3.Connection:
+    """Create the SQLite database and insert all records."""
+    con = sqlite3.connect(db_path)
+    cur = con.cursor()
+
+    # Create tables
+    cur.execute(CREATE_CAMPUSES_SQL)
+    cur.execute(CREATE_INCIDENTS_SQL)
+    cur.execute(CREATE_OFFENSES_SQL)
+    cur.execute(CREATE_INCIDENT_OFFENSES_SQL)
+    for view_sql in CREATE_VIEWS_SQL:
+        cur.execute(view_sql)
+
+    # Seed campuses
+    cur.executemany(
+        "INSERT OR IGNORE INTO campuses (campus_code, campus_name) VALUES (?,?)",
+        CAMPUS_SEED
+    )
+
+    # Build campus lookup
+    cur.execute("SELECT campus_code, campus_id FROM campuses")
+    campus_map = dict(cur.fetchall())
+
+    inserted = 0
+    updated = 0
+    skipped = 0
+
+    for rec in records:
+        code = rec.get("campus_code", "")
+        campus_id = campus_map.get(code)
+
+        if not campus_id:
+            logger.warning(f"  ⚠️  Unknown campus code: {code} for campus {rec.get('campus')}")
+            # Try to get by name
+            campus_name = rec.get("campus", "")
+            code = CAMPUS_NAME_TO_CODE.get(campus_name)
+            campus_id = campus_map.get(code) if code else None
+
+            if not campus_id:
+                logger.warning(f"  ⚠️  Skipping record, cannot determine campus")
+                skipped += 1
+                continue
+
+        # Parse occurred datetime
+        occ       = rec.get("occurred_datetime", "")
+        occ_parts = [p.strip() for p in occ.split(" to ")] if occ else []
+        occ_start = occ_parts[0] if occ_parts else ""
+        occ_end   = occ_parts[1] if len(occ_parts) > 1 else ""
+
+        incident_number = rec.get("incident_number", "")
+
+        try:
+            # Check if incident already exists
+            if incident_number:
+                cur.execute(
+                    "SELECT id FROM incidents WHERE incident_number = ?",
+                    (incident_number,)
+                )
+                existing = cur.fetchone()
+
+                if existing:
+                    logger.debug(f"  Incident {incident_number} already exists, skipping")
+                    skipped += 1
+                    continue
+
+            # Insert incident
+            cur.execute(
+                """INSERT INTO incidents
+                   (incident_number, campus_id, reported_datetime,
+                    occurred_start, occurred_end,
+                    nature_of_incident, location)
+                   VALUES (?,?,?,?,?,?,?)""",
+                (
+                    incident_number or None,
+                    campus_id,
+                    rec.get("reported_datetime", ""),
+                    occ_start,
+                    occ_end,
+                    rec.get("nature_of_incident", ""),
+                    rec.get("location", ""),
+                )
+            )
+            inc_id = cur.lastrowid
+
+            # Insert offenses
+            offense_text = rec.get("offenses", "")
+            if offense_text:
+                # Split by newlines and clean
+                for raw_offense in offense_text.split("\n"):
+                    code_str = raw_offense.strip()
+                    if not code_str or len(code_str) > 200:
+                        continue
+
+                    cur.execute(
+                        "INSERT OR IGNORE INTO offense_types (offense_code) VALUES (?)",
+                        (code_str,)
+                    )
+                    cur.execute(
+                        "SELECT offense_id FROM offense_types WHERE offense_code=?",
+                        (code_str,)
+                    )
+                    off_row = cur.fetchone()
+                    if off_row:
+                        off_id = off_row[0]
+                        cur.execute(
+                            "INSERT OR IGNORE INTO incident_offenses VALUES (?,?)",
+                            (inc_id, off_id)
+                        )
+
+            inserted += 1
+
+        except sqlite3.IntegrityError as e:
+            logger.debug(f"  Duplicate incident: {incident_number}")
+            skipped += 1
+        except Exception as e:
+            logger.error(f"  ⚠️  DB insert error for {incident_number}: {e}")
+            logger.debug(f"  Problematic record: {json.dumps(rec, indent=2)}")
+            skipped += 1
+
+    con.commit()
+    logger.info(f"\n✅ Inserted: {inserted} | Skipped: {skipped}")
+    return con
+
+# ── Summary ───────────────────────────────────────────────────────────────
+
+def print_summary(con: sqlite3.Connection):
+    """Print database statistics."""
+    cur = con.cursor()
+
+    print("\n" + "="*70)
+    print(" DATABASE SUMMARY")
+    print("="*70)
+
+    cur.execute("SELECT COUNT(*) FROM incidents")
+    total = cur.fetchone()[0]
+    print(f"  Total incidents:    {total}")
+
+    if total == 0:
+        print("\n  ⚠️  No incidents found in database!")
+        print("  This could mean:")
+        print("    - The website structure has changed")
+        print("    - There are no incidents in the selected date range")
+        print("    - Network issues prevented scraping")
+        print("\n  Try running with --debug flag for more information")
+        print("="*70)
+        return
+
+    cur.execute("SELECT COUNT(*) FROM offense_types")
+    print(f"  Unique offenses:    {cur.fetchone()[0]}")
+
+    cur.execute("SELECT COUNT(DISTINCT campus_id) FROM incidents")
+    print(f"  Campuses with data: {cur.fetchone()[0]}")
+
+    print("\n── Incidents by Campus " + "─"*45)
+    cur.execute("SELECT * FROM v_incidents_by_campus LIMIT 15")
+    rows = cur.fetchall()
+
+    if rows:
+        print(f"  {'Campus':<25} {'Total':>6} {'Latest':>12}")
+        print("  " + "-"*45)
+        for campus, total, _, latest in rows:
+            latest_str = (latest or '')[:10] if latest else 'N/A'
+            print(f"  {campus:<25} {total:>6} {latest_str:>12}")
+    else:
+        print("  No data available")
+
+    print("\n── Top 10 Offense Types " + "─"*42)
+    cur.execute("SELECT * FROM v_top_offenses LIMIT 10")
+    rows = cur.fetchall()
+
+    if rows:
+        for offense, freq in rows:
+            print(f"  {offense:<50} {freq:>4}x")
+    else:
+        print("  No offense data available")
+
+    print("\n── Recent Incidents " + "─"*48)
+    cur.execute("""
+        SELECT incident_number, campus, nature_of_incident, reported_datetime
+        FROM v_incidents_full
+        ORDER BY reported_datetime DESC
+        LIMIT 5
+    """)
+    rows = cur.fetchall()
+
+    if rows:
+        for inc_num, campus, nature, reported in rows:
+            print(f"\n  {inc_num or 'N/A'} - {campus}")
+            print(f"  {nature[:65]}")
+            print(f"  Reported: {reported}")
+    else:
+        print("  No recent incidents")
+
+    print("\n" + "="*70)
+
+# ── Main ──────────────────────────────────────────────────────────────────
+
+def main():
+    """Main entry point."""
+    # Parse arguments
+    days = 30
+    specific_campus = None
+    debug = False
+
+    args = sys.argv[1:]
+    i = 0
+    while i < len(args):
+        arg = args[i]
+
+        if arg in ['--days', '-d']:
+            if i + 1 < len(args):
+                try:
+                    days = int(args[i + 1])
+                    i += 1
+                except ValueError:
+                    print(f"Invalid days value: {args[i + 1]}")
+                    sys.exit(1)
+        elif arg.startswith('--days='):
+            try:
+                days = int(arg.split('=', 1)[1])
+            except ValueError:
+                print(f"Invalid days value in {arg}")
+                sys.exit(1)
+        elif arg in ['--campus', '-c']:
+            if i + 1 < len(args):
+                specific_campus = args[i + 1]
+                i += 1
+        elif arg.startswith('--campus='):
+            specific_campus = arg.split('=', 1)[1]
+        elif arg in ['--debug', '-v']:
+            debug = True
+        elif arg in ['--help', '-h']:
+            print(__doc__)
+            sys.exit(0)
+
+        i += 1
+
+    # Setup logging
+    setup_logging(debug)
+
+    # Display configuration
+    logger.info("="*70)
+    logger.info(" Penn State Crime Log Scraper")
+    logger.info("="*70)
+    logger.info(f"  Days to scrape: {days}")
+    logger.info(f"  Specific campus: {specific_campus or 'All campuses'}")
+    logger.info(f"  Debug mode: {debug}")
+    logger.info(f"  Database: {DB_PATH}")
+    logger.info("="*70)
+
+    # Scrape
+    logger.info(f"\n🌐 Starting scrape...")
+    records = scrape_all_campuses(days_back=days, specific_campus=specific_campus, debug=debug)
+    logger.info(f"\n📦 Total records scraped: {len(records)}")
+
+    if not records:
+        logger.warning("\n⚠️  No records were scraped!")
+        logger.warning("Possible reasons:")
+        logger.warning("  1. No incidents in the selected date range")
+        logger.warning("  2. Website structure has changed")
+        logger.warning("  3. Network connectivity issues")
+        logger.warning("\nTry:")
+        logger.warning("  - Running with --debug flag")
+        logger.warning("  - Increasing --days parameter")
+        logger.warning("  - Checking network connectivity")
+        sys.exit(1)
+
+    # Build database
+    logger.info(f"\n🗄️  Building SQLite database: {DB_PATH}")
+    con = build_database(records, DB_PATH)
+
+    # Print summary
+    print_summary(con)
+    con.close()
+
+    # Export JSON
+    json_path = DB_PATH.replace(".db", "_records.json")
+    with open(json_path, "w", encoding='utf-8') as f:
+        json.dump(records, f, indent=2, ensure_ascii=False)
+    logger.info(f"\n📄 Records exported to JSON: {json_path}")
+
+    logger.info("\n✅ Scraping complete!")
+
+if __name__ == "__main__":
+    main()
