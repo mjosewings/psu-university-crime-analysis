@@ -79,6 +79,15 @@ CAMPUS_CODES = {
     "WB": "Wilkes-Barre",
     "WS": "Worthington Scranton",
     "YK": "York",
+    # Temporary/alternate codes seen in incident numbers
+    "HN": "Hershey",
+    "ER": "Erie (Behrend)",
+    "BKT": "Beaver",
+    "SL": "Schuylkill",
+    "DS": "DuBois",
+    "FE": "Fayette",
+    "ABT": "Abington",
+    "PSHI": "University Park",  # Penn State Hershey incidents
 }
 
 # Reverse mapping
@@ -112,38 +121,21 @@ def parse_incidents(html: str, campus_label: str, debug=False) -> list[dict]:
     """
     Parse incident records from the crime log HTML page.
 
-    The page structure uses .views-row for each incident.
-    Each incident contains various fields we need to extract.
+    The page structure uses .views-row for each incident, with structured HTML fields.
+    Fields are in divs with class "field__item" under labeled containers.
     """
     soup = BeautifulSoup(html, "html.parser")
     incidents = []
 
-    # Try multiple possible selectors
-    selectors = [
-        ".views-row",
-        "div.views-row",
-        ".view-content .views-row",
-        "article",
-        ".node",
-    ]
-
-    blocks = []
-    for selector in selectors:
-        blocks = soup.select(selector)
-        if blocks:
-            logger.debug(f"Found {len(blocks)} blocks using selector: {selector}")
-            break
+    # Find all incident blocks
+    blocks = soup.select(".views-row")
 
     if not blocks:
         logger.warning(f"No incident blocks found for {campus_label}")
-        # Try to find any divs with incident-like content
-        blocks = soup.find_all('div', class_=lambda x: x and 'view' in x.lower())
-        logger.debug(f"Fallback: found {len(blocks)} potential blocks")
-
-        if debug and not blocks:
-            # Print some of the HTML for debugging
+        if debug:
             logger.debug("HTML preview:")
             logger.debug(soup.prettify()[:2000])
+        return incidents
 
     for idx, block in enumerate(blocks):
         incident = {
@@ -152,97 +144,60 @@ def parse_incidents(html: str, campus_label: str, debug=False) -> list[dict]:
             "campus_code": CAMPUS_NAME_TO_CODE.get(campus_label, ""),
         }
 
-        # Get all text content
-        text = block.get_text(separator="\n", strip=True)
-        lines = [line.strip() for line in text.split("\n") if line.strip()]
+        try:
+            # Extract Incident Number from h2 or title field
+            incident_elem = block.select_one("span.field--name-title")
+            if incident_elem:
+                incident["incident_number"] = incident_elem.get_text(strip=True)
+                # Extract campus code from incident number (e.g., "24UP12345" -> "UP")
+                code_match = re.match(r'\d{2}([A-Z]{2,3})', incident["incident_number"])
+                if code_match:
+                    incident["campus_code"] = code_match.group(1)
 
-        if debug and idx == 0:
-            logger.debug(f"First incident raw text:\n{text[:500]}")
+            # Extract Reported datetime
+            reported_elem = block.select_one("div.field--name-field-reported .field__item")
+            if reported_elem:
+                incident["reported_datetime"] = reported_elem.get_text(strip=True)
 
-        field_map = {}
+            # Extract Occurred datetime (may be a range)
+            occurred_elem = block.select_one("div.field--name-field-occurred .field__item")
+            if occurred_elem:
+                incident["occurred_datetime"] = occurred_elem.get_text(strip=True)
 
-        # Parse each line looking for field patterns
-        for line in lines:
-            # Incident Number
-            if re.search(r'INCIDENT\s*#', line, re.IGNORECASE):
-                match = re.search(r'INCIDENT\s*#?\s*:?\s*(\S+)', line, re.IGNORECASE)
-                if match:
-                    incident["incident_number"] = match.group(1)
-                    # Extract campus code from incident number (e.g., "24UP12345" -> "UP")
-                    code_match = re.match(r'\d{2}([A-Z]{2,3})\d+', match.group(1))
-                    if code_match:
-                        incident["campus_code"] = code_match.group(1)
+            # Extract Nature of Incident
+            nature_elem = block.select_one("div.field--name-field-nature-of-incident1 .field__item")
+            if nature_elem:
+                incident["nature_of_incident"] = nature_elem.get_text(strip=True)
 
-            # Reported date/time
-            if re.match(r'^Reported\s*:', line, re.IGNORECASE):
-                match = re.match(r'^Reported\s*:\s*(.+)$', line, re.IGNORECASE)
-                if match:
-                    field_map["Reported"] = match.group(1).strip()
+            # Extract Offenses
+            offenses_elem = block.select_one("div.field--name-field-offenses1 .field__item")
+            if offenses_elem:
+                incident["offenses"] = offenses_elem.get_text(strip=True)
 
-            # Occurred date/time
-            if re.match(r'^Occurred\s*:', line, re.IGNORECASE):
-                match = re.match(r'^Occurred\s*:\s*(.+)$', line, re.IGNORECASE)
-                if match:
-                    field_map["Occurred"] = match.group(1).strip()
+            # Extract Location
+            location_elem = block.select_one("div.field--name-field-location .field__item")
+            if location_elem:
+                incident["location"] = location_elem.get_text(strip=True)
 
-            # Nature of Incident
-            if re.match(r'^Nature of Incident\s*:', line, re.IGNORECASE):
-                match = re.match(r'^Nature of Incident\s*:\s*(.+)$', line, re.IGNORECASE)
-                if match:
-                    field_map["Nature"] = match.group(1).strip()
+            if debug and idx == 0:
+                logger.debug(f"First incident parsed:")
+                logger.debug(f"  Number: {incident['incident_number']}")
+                logger.debug(f"  Reported: {incident['reported_datetime']}")
+                logger.debug(f"  Nature: {incident['nature_of_incident']}")
 
-            # Offenses
-            if re.match(r'^Offenses?\s*:', line, re.IGNORECASE):
-                match = re.match(r'^Offenses?\s*:\s*(.+)$', line, re.IGNORECASE)
-                if match:
-                    field_map["Offenses"] = match.group(1).strip()
+            # Only add if we have at least some data
+            if any([
+                incident.get("incident_number"),
+                incident.get("reported_datetime"),
+                incident.get("nature_of_incident")
+            ]):
+                incidents.append(incident)
+            else:
+                logger.debug(f"Skipping empty incident block {idx}")
 
-            # Location
-            if re.match(r'^Location\s*:', line, re.IGNORECASE):
-                match = re.match(r'^Location\s*:\s*(.+)$', line, re.IGNORECASE)
-                if match:
-                    field_map["Location"] = match.group(1).strip()
-
-        # Sometimes offenses are on multiple lines after "Offenses:"
-        # We need to handle multi-line field values
-        offense_lines = []
-        in_offenses = False
-        for line in lines:
-            if re.match(r'^Offenses?\s*:', line, re.IGNORECASE):
-                in_offenses = True
-                # Get the part after the colon
-                parts = line.split(':', 1)
-                if len(parts) > 1 and parts[1].strip():
-                    offense_lines.append(parts[1].strip())
-            elif in_offenses:
-                # Check if this is a new field
-                if re.match(r'^(Reported|Occurred|Nature|Location|INCIDENT)\s*:', line, re.IGNORECASE):
-                    in_offenses = False
-                else:
-                    # This is a continuation of offenses
-                    offense_lines.append(line)
-
-        if offense_lines:
-            field_map["Offenses"] = "\n".join(offense_lines)
-
-        # Update incident with parsed fields
-        incident.update({
-            "reported_datetime":  field_map.get("Reported", ""),
-            "occurred_datetime":  field_map.get("Occurred", ""),
-            "nature_of_incident": field_map.get("Nature", ""),
-            "offenses":           field_map.get("Offenses", ""),
-            "location":           field_map.get("Location", ""),
-        })
-
-        # Only add if we have at least some data
-        if any([
-            incident.get("incident_number"),
-            incident.get("reported_datetime"),
-            incident.get("nature_of_incident")
-        ]):
-            incidents.append(incident)
-        else:
-            logger.debug(f"Skipping empty incident block: {text[:100]}")
+        except Exception as e:
+            logger.debug(f"Error parsing incident block {idx}: {e}")
+            continue
 
     return incidents
 
