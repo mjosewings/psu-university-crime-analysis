@@ -41,52 +41,28 @@ The schema is designed to support multi-campus analysis, efficient querying, and
 
 ---
 ## 📦 Repository Structure
-```psu-campus-crime-analysis/
-├── sql/
-│   ├── schema/
-│   │   └── create_database.sql        # Campus metadata
-│   │  
-│   ├── inserts/
-│   │   ├── campuses.sql             # Campus reference data
-│   │   ├── locations.sql            # Location reference data
-│   │   └── offenses.sql             # Offense reference data
-│   ├── queries/
-│   │   ├── exploratory.sql          # Initial data exploration
-│   │   ├── trends.sql               # Temporal trend analysis
-│   │   ├── campus_comparisons.sql   # Cross-campus comparisons
-│   │   └── exports.sql              # CSV export queries
-│
+```psu-university-crime-analysis/
+├── scraper/
+│   ├── __init__.py                    # Empty file to make it a package
+│   └── psu_crime_scraper.py           # Move from root
 ├── data/
-│   ├── raw/
-│   │   ├── abington_raw.csv
-│   │   └── university_park_raw.csv
-│   ├── cleaned/
-│   │   ├── abington_cleaned.csv
-│   │   └── university_park_cleaned.csv
-│   ├── merged/
-│   │   └── incidents_analysis.csv  # Denormalized analysis-ready dataset
-│
+│   ├── psu_crime_log.db               # Move from root
+│   └── psu_crime_log_records.json     # Move from root
 ├── analysis/
 │   ├── notebooks/
-│   │   └── crime_trends.ipynb
+│   │   └── (Jupyter notebooks here)
 │   └── scripts/
-│       └── summary_statistics.py
-│
-├── figures/
-│   ├── incidents_by_month.png
-│   ├── offenses_by_type.png
-│   └── campus_comparison.png
-│
+│       └── (Analysis scripts here)
 ├── docs/
-│   ├── proposal.md                  # Project proposal
-│   ├── methodology.md               # Data collection & ethics
-│   ├── data_dictionary.md           # Column definitions
-│   └── references.md                # Sources & citations
-│
-├── README.md
-└── LICENSE 
+│   ├── README.md (or similar)
+│   └── (Additional documentation)
+├── figures/
+│   └── (Generated visualizations)
+├── .gitignore                         # New file
+├── requirements.txt                   # New file
+├── README.md                          # Update this
+└── LICENSE
 ```
-
 ---
 ## 📚 Academic Context
 This project is developed as part of a data mining and database-focused academic course at Penn State Abington. 
