@@ -1,13 +1,34 @@
 """
-Penn State Daily Crime Log Scraper (Fixed & Enhanced)
-Scrapes https://www.police.psu.edu/daily-crime-log for all campuses
-and builds a SQLite database with the results.
+Penn State Daily Crime Log Scraper
+==================================
 
-Usage:
-    python3 psu_crime_scraper.py              # scrape last 30 days (default)
-    python3 psu_crime_scraper.py --days 60   # scrape last 60 days
-    python3 psu_crime_scraper.py --campus "University Park"  # specific campus
-    python3 psu_crime_scraper.py --debug     # enable debug output
+Scrapes the public Daily Crime Log from the Penn State University Police
+website for one or more campuses and builds a SQLite database plus a JSON
+export of the raw records.
+
+By default, the scraper pulls approximately the **last three years** of
+records for each campus. This provides enough historical depth for trend
+analysis while remaining tractable for periodic reruns. You can override the
+window using the ``--days`` flag.
+
+Example usage
+-------------
+
+    # Scrape last 3 years for all campuses (default)
+    python psu_crime_scraper.py
+
+    # Scrape last 60 days
+    python psu_crime_scraper.py --days 60
+
+    # Scrape last 3 years but only for Penn State Abington
+    python psu_crime_scraper.py --campus "Abington"
+
+    # Enable verbose debug logging and save HTML snapshots
+    python psu_crime_scraper.py --debug
+
+All data is sourced from official public Daily Crime Log records and is
+aggregated for campus-level analysis. No personally identifiable information
+(PII) is stored or analyzed.
 """
 
 import sqlite3
@@ -18,7 +39,7 @@ import time
 import logging
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import List, Dict
+from typing import List, Dict, Optional
 
 import requests
 from bs4 import BeautifulSoup
@@ -28,6 +49,15 @@ from bs4 import BeautifulSoup
 BASE_URL = "https://www.police.psu.edu/daily-crime-log"
 DB_PATH = "psu_crime_log.db"
 DEBUG_HTML_DIR = Path("debug_html")
+
+# Default time window when the user does not specify --days explicitly.
+# Three years is large enough for temporal trends but still manageable to
+# scrape on a typical laptop.
+DEFAULT_DAYS = 365 * 3
+
+# Safety cap to avoid accidentally scraping an extremely long history in
+# a single run (which could stress both the client and the remote site).
+MAX_DAYS = 365 * 10
 
 CAMPUSES = {
     "Univ Park":     "University Park",
@@ -111,14 +141,14 @@ logger = logging.getLogger(__name__)
 # ── Parsing ────────────────────────────────────────────────────────────────
 
 def save_debug_html(html: str, campus: str, page: int):
-    """Save HTML to file for debugging."""
+    """Save raw HTML to disk for debugging when the site structure changes."""
     DEBUG_HTML_DIR.mkdir(exist_ok=True)
     filepath = DEBUG_HTML_DIR / f"{campus.replace(' ', '_')}_page{page}.html"
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(html)
     logger.debug(f"Saved debug HTML to {filepath}")
 
-def parse_incidents(html: str, campus_label: str, debug=False) -> List[Dict]:
+def parse_incidents(html: str, campus_label: str, debug: bool = False) -> List[Dict]:
     """
     Parse incident records from the crime log HTML page.
 
@@ -128,7 +158,8 @@ def parse_incidents(html: str, campus_label: str, debug=False) -> List[Dict]:
     soup = BeautifulSoup(html, "html.parser")
     incidents = []
 
-    # Find all incident blocks
+    # Each incident is rendered as a `.views-row` block in the PSU site.
+    # If this selector stops matching, the upstream HTML likely changed.
     blocks = soup.select(".views-row")
 
     if not blocks:
@@ -210,11 +241,31 @@ def parse_incidents(html: str, campus_label: str, debug=False) -> List[Dict]:
 # ── Scraping ───────────────────────────────────────────────────────────────
 
 def scrape_campus(campus_filter: str, campus_label: str,
-                  start_date: str = None, end_date: str = None,
-                  session: requests.Session = None,
+                  start_date: Optional[str] = None, end_date: Optional[str] = None,
+                  session: Optional[requests.Session] = None,
                   max_pages: int = 100,
                   debug: bool = False) -> List[Dict]:
-    """Scrape all pages for a given campus filter."""
+    """
+    Scrape all available pages for a single campus within an optional date range.
+
+    Parameters
+    ----------
+    campus_filter:
+        Short label used by the PSU site in the ``campus`` query parameter
+        (e.g. ``"Univ Park"``).
+    campus_label:
+        Human-readable campus name stored in the record payload.
+    start_date, end_date:
+        Inclusive date range in ``MM/DD/YYYY`` format. If either is ``None``,
+        the PSU site's default behaviour is used.
+    session:
+        Optional shared :class:`requests.Session` for connection reuse.
+    max_pages:
+        Upper bound on pagination iterations as a safety net.
+    debug:
+        When ``True``, emit additional logging and save HTML snapshots.
+    """
+
     s = session or requests.Session()
     s.headers.update({
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
@@ -248,10 +299,10 @@ def scrape_campus(campus_filter: str, campus_label: str,
                 break
 
         except requests.exceptions.Timeout:
-            logger.error(f"  ⚠️  Timeout fetching {campus_label} page {page}")
+            logger.error(f"  Timeout fetching {campus_label} page {page}")
             break
         except requests.exceptions.RequestException as e:
-            logger.error(f"  ⚠️  Error fetching {campus_label} page {page}: {e}")
+            logger.error(f"  Error fetching {campus_label} page {page}: {e}")
             break
 
         incidents = parse_incidents(resp.text, campus_label, debug=debug)
@@ -275,14 +326,20 @@ def scrape_campus(campus_filter: str, campus_label: str,
 
     return all_incidents
 
-def scrape_all_campuses(days_back: int = 30, specific_campus: str = None, debug: bool = False) -> List[Dict]:
-    """Scrape the last N days for ALL campuses (or a specific one)."""
+def scrape_all_campuses(days_back: int = DEFAULT_DAYS, specific_campus: Optional[str] = None,
+                        debug: bool = False) -> List[Dict]:
+    """
+    Scrape the last N days for ALL campuses (or a specific one).
+
+    The default window (:data:`DEFAULT_DAYS`) is roughly three years of
+    history, which is a good balance between temporal coverage and runtime.
+    """
     end_dt    = datetime.now()
     start_dt  = end_dt - timedelta(days=days_back)
     start_str = start_dt.strftime("%m/%d/%Y")
     end_str   = end_dt.strftime("%m/%d/%Y")
 
-    logger.info(f"📅 Date range: {start_str} → {end_str}")
+    logger.info(f"Date range: {start_str} to {end_str}")
 
     session     = requests.Session()
     all_records = []
@@ -433,14 +490,14 @@ def build_database(records: List[Dict], db_path: str = DB_PATH) -> sqlite3.Conne
         campus_id = campus_map.get(code)
 
         if not campus_id:
-            logger.warning(f"  ⚠️  Unknown campus code: {code} for campus {rec.get('campus')}")
+            logger.warning(f"  Unknown campus code: {code} for campus {rec.get('campus')}")
             # Try to get by name
             campus_name = rec.get("campus", "")
             code = CAMPUS_NAME_TO_CODE.get(campus_name)
             campus_id = campus_map.get(code) if code else None
 
             if not campus_id:
-                logger.warning(f"  ⚠️  Skipping record, cannot determine campus")
+                logger.warning(f"  Skipping record, cannot determine campus")
                 skipped += 1
                 continue
 
@@ -596,93 +653,3 @@ def print_summary(con: sqlite3.Connection):
 
     print("\n" + "="*70)
 
-# ── Main ──────────────────────────────────────────────────────────────────
-
-def main():
-    """Main entry point."""
-    # Parse arguments
-    days = 30
-    specific_campus = None
-    debug = False
-
-    args = sys.argv[1:]
-    i = 0
-    while i < len(args):
-        arg = args[i]
-
-        if arg in ['--days', '-d']:
-            if i + 1 < len(args):
-                try:
-                    days = int(args[i + 1])
-                    i += 1
-                except ValueError:
-                    print(f"Invalid days value: {args[i + 1]}")
-                    sys.exit(1)
-        elif arg.startswith('--days='):
-            try:
-                days = int(arg.split('=', 1)[1])
-            except ValueError:
-                print(f"Invalid days value in {arg}")
-                sys.exit(1)
-        elif arg in ['--campus', '-c']:
-            if i + 1 < len(args):
-                specific_campus = args[i + 1]
-                i += 1
-        elif arg.startswith('--campus='):
-            specific_campus = arg.split('=', 1)[1]
-        elif arg in ['--debug', '-v']:
-            debug = True
-        elif arg in ['--help', '-h']:
-            print(__doc__)
-            sys.exit(0)
-
-        i += 1
-
-    # Setup logging
-    setup_logging(debug)
-
-    # Display configuration
-    logger.info("="*70)
-    logger.info(" Penn State Crime Log Scraper")
-    logger.info("="*70)
-    logger.info(f"  Days to scrape: {days}")
-    logger.info(f"  Specific campus: {specific_campus or 'All campuses'}")
-    logger.info(f"  Debug mode: {debug}")
-    logger.info(f"  Database: {DB_PATH}")
-    logger.info("="*70)
-
-    # Scrape
-    logger.info(f"\n🌐 Starting scrape...")
-    records = scrape_all_campuses(days_back=days, specific_campus=specific_campus, debug=debug)
-    logger.info(f"\n📦 Total records scraped: {len(records)}")
-
-    if not records:
-        logger.warning("\n⚠️  No records were scraped!")
-        logger.warning("Possible reasons:")
-        logger.warning("  1. No incidents in the selected date range")
-        logger.warning("  2. Website structure has changed")
-        logger.warning("  3. Network connectivity issues")
-        logger.warning("\nTry:")
-        logger.warning("  - Running with --debug flag")
-        logger.warning("  - Increasing --days parameter")
-        logger.warning("  - Checking network connectivity")
-        sys.exit(1)
-
-    # Build database
-    logger.info(f"\n🗄️  Building SQLite database: {DB_PATH}")
-    con = build_database(records, DB_PATH)
-
-    # Print summary
-    print_summary(con)
-    con.close()
-
-    # Export JSON
-    json_path = DB_PATH.replace(".db", "_records.json")
-    with open(json_path, "w", encoding='utf-8') as f:
-        json.dump(records, f, indent=2, ensure_ascii=False)
-    logger.info(f"\n📄 Records exported to JSON: {json_path}")
-
-    logger.info("\n✅ Scraping complete!")
-
-if __name__ == "__main__":
-    main()
