@@ -13,10 +13,15 @@ import csv
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Paths for the *working* database/JSON that will be cleaned in-place
 DB_PATH = os.path.join(BASE_DIR, "psu_crime_log.db")
 JSON_PATH = os.path.join(BASE_DIR, "psu_crime_log_records.json")
+
+# Paths for the SQL cleanup script and data directories
 SQL_PATH = os.path.join(BASE_DIR, "clean_campus_codes.sql")
 DATA_DIR = os.path.join(BASE_DIR, "data")
+RAW_DATA_DIR = os.path.join(DATA_DIR, "raw")
 
 # Mapping of incorrect campus codes to correct ones
 CAMPUS_CODE_FIXES = {
@@ -55,6 +60,70 @@ CORRECT_CAMPUS_NAMES = {
     "WS": "Worthington Scranton",
     "YK": "York",
 }
+
+
+def backup_raw_files_and_export_raw_csvs():
+    """
+    Preserve the raw database/JSON and export raw CSVs *before* any cleaning.
+
+    - Copies the current psu_crime_log.db and psu_crime_log_records.json
+      into data/raw/ so we always retain the original scrape.
+    - Exports all tables from the raw database into data/raw/*_raw.csv.
+    """
+    print("=" * 60)
+    print("STEP 0: Backing up raw data and exporting raw CSVs")
+    print("=" * 60)
+
+    os.makedirs(RAW_DATA_DIR, exist_ok=True)
+
+    raw_db_dest = os.path.join(RAW_DATA_DIR, "psu_crime_log.db")
+    raw_json_dest = os.path.join(RAW_DATA_DIR, "psu_crime_log_records.json")
+
+    # Copy raw .db and .json (if they exist)
+    import shutil
+
+    if os.path.exists(DB_PATH):
+        shutil.copy2(DB_PATH, raw_db_dest)
+        print(f"  Raw DB copied to data/raw/psu_crime_log.db")
+    else:
+        print("  WARNING: psu_crime_log.db not found; skipping raw DB backup")
+
+    if os.path.exists(JSON_PATH):
+        shutil.copy2(JSON_PATH, raw_json_dest)
+        print(f"  Raw JSON copied to data/raw/psu_crime_log_records.json")
+    else:
+        print("  WARNING: psu_crime_log_records.json not found; skipping raw JSON backup")
+
+    # Export raw CSVs from the backed-up raw database
+    if os.path.exists(raw_db_dest):
+        conn = sqlite3.connect(raw_db_dest)
+        cursor = conn.cursor()
+
+        tables = ["campuses", "incidents", "offense_types", "incident_offenses"]
+
+        for table in tables:
+            try:
+                cursor.execute(f"SELECT * FROM {table}")
+            except sqlite3.OperationalError:
+                print(f"  WARNING: Table '{table}' not found in raw DB; skipping")
+                continue
+
+            rows = cursor.fetchall()
+            col_names = [desc[0] for desc in cursor.description]
+
+            csv_path = os.path.join(RAW_DATA_DIR, f"{table}_raw.csv")
+            with open(csv_path, "w", newline="", encoding="utf-8") as f:
+                writer = csv.writer(f)
+                writer.writerow(col_names)
+                writer.writerows(rows)
+
+            print(f"  Exported RAW {table}: {len(rows)} rows -> data/raw/{table}_raw.csv")
+
+        conn.close()
+    else:
+        print("  WARNING: Raw DB backup not found; skipping raw CSV export")
+
+    print()
 
 
 def clean_database():
@@ -181,12 +250,3 @@ def copy_clean_db():
     print(f"  Copied to data/psu_crime_log.db")
     print()
 
-
-if __name__ == "__main__":
-    print("\nPSU Campus Crime Data - Cleanup Script")
-    print("=" * 60)
-    clean_database()
-    clean_json()
-    export_csvs()
-    copy_clean_db()
-    print("Done! All data cleaned and exported.")
