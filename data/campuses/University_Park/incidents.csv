@@ -1,0 +1,407 @@
+id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,campus
+181,26UP00696,1,02/10/2026 07:07 PM,02/10/2026 07:07 PM,02/10/2026 07:25 PM,Student reported suspicious activity,PATTERSON HALL,2026-02-18 21:43:32,University_Park
+182,26UP00695,1,02/10/2026 06:42 PM,02/10/2026 06:42 PM,02/10/2026 07:15 PM,Employee reported a University policy violation,WILLARD BLDG,2026-02-18 21:43:32,University_Park
+183,26UP00693,1,02/10/2026 04:25 PM,02/10/2026 04:25 PM,02/10/2026 05:00 PM,Student reported suspicious person,NITTANY PARKING,2026-02-18 21:43:32,University_Park
+187,26UP00691,1,02/10/2026 02:33 PM,02/10/2026 02:33 PM,02/10/2026 03:21 PM,Employee reported abandoned property,WESTGATE BLDG,2026-02-18 21:43:32,University_Park
+189,26UP00690,1,02/10/2026 01:38 PM,02/10/2026 01:38 PM,02/10/2026 02:38 PM,Employee requested assistance with a personal matter,RED A (BUS DEPOT) LOT,2026-02-18 21:43:32,University_Park
+190,26UP00689,1,02/10/2026 01:36 PM,02/10/2026 01:36 PM,02/10/2026 03:30 PM,Officer conducted a pre-employment background investigation,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+191,26UP00688,1,02/10/2026 01:28 PM,02/10/2026 01:28 PM,02/10/2026 01:44 PM,Visitor reported suspicious activity/persons,MILLENNIUM SCIENCE COMPLEX,2026-02-18 21:43:32,University_Park
+192,26UP00687,1,02/10/2026 12:45 PM,02/10/2026 12:45 PM,02/10/2026 01:15 PM,Student reported the loss of their unattended personal property,AG SCIENCE AND INDUSTRIES,2026-02-18 21:43:32,University_Park
+196,26UP00686,1,02/10/2026 12:08 PM,02/10/2026 12:00 PM,02/10/2026 12:08 PM,Employee reported a two vehicle crash with no injuries,YELLOW R AG ADMIN LOT,2026-02-18 21:43:32,University_Park
+206,26UP00685,1,02/09/2026 09:50 PM,02/09/2026 09:50 PM,02/10/2026 12:38 AM,Assisted the fire department with a reported fire,SHULZE HALL,2026-02-18 21:43:32,University_Park
+212,26UP00682,1,02/09/2026 04:43 PM,01/12/2026 12:00 AM,01/29/2026 12:00 AM,Employee reported being harassed,BOUCKE BLDG,2026-02-18 21:43:32,University_Park
+216,26UP00683,1,02/09/2026 04:19 PM,02/05/2025 04:15 PM,02/09/2026 04:19 PM,Student reported the loss or theft of their unattended personal property,WHITE BLDG,2026-02-18 21:43:32,University_Park
+217,26UP00680,1,02/09/2026 03:55 PM,02/04/2026 03:55 PM,02/05/2026 02:00 PM,Employee reported a concern for a student,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+218,26UP00678,1,02/09/2026 03:36 PM,02/08/2026 03:26 AM,02/08/2026 04:17 AM,Visitor reported disorderly persons,BEAVER HALL,2026-02-18 21:43:32,University_Park
+219,26UP00679,1,02/09/2026 02:56 PM,02/07/2026 04:47 PM,02/09/2026 02:56 PM,Visitor reported a hit and run vehicle crash,EAST PARKING DECK,2026-02-18 21:43:32,University_Park
+224,26UP00677,1,02/09/2026 01:46 PM,02/09/2026 10:55 AM,02/09/2026 03:00 PM,Student reported a hit and run vehicle crash,HUB PARKING DECK,2026-02-18 21:43:32,University_Park
+229,26UP00674,1,02/09/2026 09:37 AM,02/07/2026 12:00 AM,02/09/2026 09:37 AM,Assisted an outside law enforcement agency with an investigation,OFF CAMPUS FRATERNITY,2026-02-18 21:43:32,University_Park
+234,26UP00673,1,02/09/2026 03:47 AM,02/09/2026 03:47 AM,02/09/2026 04:40 AM,Visitor reported a traffic concern regarding a vehicle,FOX HOLLOW RD & E PARK AVE,2026-02-18 21:43:32,University_Park
+246,26UP00672,1,02/08/2026 09:22 PM,02/08/2026 09:22 PM,02/08/2026 11:03 PM,Assisted the fire department with a reported fire alarm activation,PALLADINO HALL,2026-02-18 21:43:32,University_Park
+255,26UP00670,1,02/08/2026 07:06 AM,02/08/2026 05:06 AM,02/08/2026 07:06 AM,Underage visitor observed highly intoxicated and transported to the hospital,HALLER HALL,2026-02-18 21:43:32,University_Park
+256,26UP00669,1,02/08/2026 02:50 AM,02/08/2026 02:50 AM,02/08/2026 03:55 AM,Underage student observed highly intoxicated,HIESTER HALL,2026-02-18 21:43:32,University_Park
+257,26UP00667,1,02/08/2026 02:32 AM,02/08/2026 02:32 AM,02/08/2026 03:00 AM,Underage student observed highly intoxicated,PENNYPACKER HALL,2026-02-18 21:43:32,University_Park
+260,26UP00671,1,02/08/2026 01:21 AM,02/08/2026 01:21 AM,02/08/2026 01:50 AM,Student reported a concern for another student,PINCHOT HALL,2026-02-18 21:43:32,University_Park
+261,26UP00666,1,02/08/2026 12:52 AM,02/08/2026 12:52 AM,02/08/2026 01:15 AM,Resident Assistant reported the odor of marijuana,STONE HALL,2026-02-18 21:43:32,University_Park
+264,26UP00664,1,02/07/2026 11:59 PM,02/07/2026 09:00 PM,02/08/2026 09:15 PM,Visitor observed highly intoxicated,BRYCE JORDAN CENTER,2026-02-18 21:43:32,University_Park
+265,26UP00665,1,02/07/2026 11:55 PM,02/07/2026 10:30 PM,02/08/2026 11:00 PM,Employee reported the theft of their unattended personal property,BRYCE JORDAN CENTER,2026-02-18 21:43:32,University_Park
+266,26UP00663,1,02/07/2026 11:49 PM,02/07/2026 10:30 PM,02/07/2026 11:44 PM,Visitor reported being harassed,BRYCE JORDAN CENTER,2026-02-18 21:43:32,University_Park
+267,26UP00662,1,02/07/2026 11:35 PM,02/07/2026 11:35 PM,02/08/2026 12:05 AM,Visitor reported a two vehicle crash with no injuries,COMMUTER JORDAN EAST 1 LOT,2026-02-18 21:43:32,University_Park
+270,26UP00658,1,02/07/2026 10:00 PM,02/07/2026 10:00 PM,02/07/2026 10:35 PM,Visitor reported a concern for another person,BRYCE JORDAN CENTER,2026-02-18 21:43:32,University_Park
+271,26UP00655,1,02/07/2026 09:30 PM,02/07/2026 09:20 PM,02/07/2026 09:35 PM,Visitor observed highly intoxicated,BRYCE JORDAN CENTER,2026-02-18 21:43:32,University_Park
+272,26UP00656,1,02/07/2026 09:29 PM,02/07/2026 09:29 PM,02/07/2026 11:15 PM,Assisted the fire department with a reported fire alarm activation,LUBERT BLDG,2026-02-18 21:43:32,University_Park
+273,26UP00654,1,02/07/2026 09:29 PM,02/07/2026 03:00 PM,02/07/2026 09:00 PM,Assisted an outside law enforcement agency with an investigation,BRYCE JORDAN CENTER,2026-02-18 21:43:32,University_Park
+274,26UP00657,1,02/07/2026 09:06 PM,02/07/2026 09:06 PM,02/07/2026 10:20 PM,Visitor observed highly intoxicated and transported to the hospital,BRYCE JORDAN CENTER,2026-02-18 21:43:32,University_Park
+275,26UP00653,1,02/07/2026 08:56 PM,02/07/2026 12:00 PM,02/07/2026 08:30 PM,Visitor reported a hit and run vehicle crash,HUB PARKING DECK,2026-02-18 21:43:32,University_Park
+276,26UP00652,1,02/07/2026 08:47 PM,02/07/2026 08:35 PM,02/07/2026 08:57 PM,Underage visitor observed highly intoxicated and transported to the hospital,BRYCE JORDAN CENTER,2026-02-18 21:43:32,University_Park
+283,26UP00651,1,02/07/2026 01:28 PM,02/07/2026 01:28 PM,02/07/2026 02:00 PM,Visitor requested assistance in locating a student,GEARY HALL,2026-02-18 21:43:32,University_Park
+284,26UP00650,1,02/07/2026 01:25 PM,02/07/2026 01:25 PM,02/07/2026 02:04 PM,Employee reported a one vehicle crash with no injuries,EAST PARKING DECK,2026-02-18 21:43:32,University_Park
+285,26UP00649,1,02/07/2026 12:27 PM,02/06/2026 02:45 PM,02/06/2026 03:10 PM,Student requested assistance with a personal matter,MCALLISTER BLDG,2026-02-18 21:43:32,University_Park
+288,26UP00648,1,02/07/2026 04:45 AM,02/07/2026 04:45 AM,02/07/2026 05:25 AM,Underage student observed highly intoxicated and transported to the hospital,ROBINSON HALL,2026-02-18 21:43:32,University_Park
+289,26UP00647,1,02/07/2026 04:45 AM,02/07/2026 04:45 AM,02/07/2026 06:03 AM,A vehicle stop investigation revealed the operator to be driving under the influence of alcohol,BIGLER RD & EISENHOWER RD,2026-02-18 21:43:32,University_Park
+290,26UP00646,1,02/07/2026 03:29 AM,02/07/2026 03:29 AM,02/07/2026 04:01 AM,Student observed highly intoxicated,MCKEAN HALL,2026-02-18 21:43:32,University_Park
+291,26UP00645,1,02/07/2026 03:08 AM,02/07/2026 03:08 AM,02/07/2026 03:33 AM,Student observed highly intoxicated and transported to the hospital,HIBBS HALL,2026-02-18 21:43:32,University_Park
+292,26UP00643,1,02/07/2026 02:43 AM,02/07/2026 02:43 AM,02/07/2026 05:43 AM,Student reported being physically assaulted by an identified person,SHORTLIDGE RD & POLLOCK RD,2026-02-18 21:43:32,University_Park
+296,26UP00638,1,02/07/2026 01:26 AM,02/07/2026 01:16 AM,02/07/2026 01:26 AM,Student observed highly intoxicated,MCKEAN HALL,2026-02-18 21:43:32,University_Park
+297,26UP00684,1,02/07/2026 01:00 AM,02/09/2026 07:48 PM,02/09/2026 08:53 PM,Received this department's copy of a Protection From Abuse (PFA) order,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+298,26UP00637,1,02/07/2026 12:50 AM,02/07/2026 12:50 AM,02/07/2026 01:11 AM,Student observed highly intoxicated and transported to the hospital,STUART HALL,2026-02-18 21:43:32,University_Park
+301,26UP00634,1,02/06/2026 11:42 PM,02/06/2026 11:42 PM,02/06/2026 11:55 PM,"Resident Assistant reported the odor of marijuana, origin not located",PACKER HALL,2026-02-18 21:43:32,University_Park
+302,26UP00632,1,02/06/2026 11:36 PM,02/06/2026 11:36 PM,02/07/2026 12:16 AM,Identified occupants in possession of marijuana and drug paraphernalia,RUNKLE HALL,2026-02-18 21:43:32,University_Park
+303,26UP00631,1,02/06/2026 11:17 PM,02/06/2026 11:17 PM,02/07/2026 11:32 PM,"Resident Assistant reported the odor of marijuana, origin not located",MIFFLIN HALL,2026-02-18 21:43:32,University_Park
+304,26UP00630,1,02/06/2026 11:08 PM,02/06/2026 10:16 PM,02/06/2026 11:08 PM,Student reported damage to University property,GEARY HALL,2026-02-18 21:43:32,University_Park
+307,26UP00625,1,02/06/2026 09:53 PM,02/06/2026 09:53 PM,02/06/2026 10:39 PM,Student observed highly intoxicated and transported to the hospital,MCKEE HALL,2026-02-18 21:43:32,University_Park
+308,26UP00623,1,02/06/2026 08:29 PM,02/06/2026 08:29 PM,02/06/2026 10:14 PM,Visitor reported a concern for another person,E COLLEGE AVE,2026-02-18 21:43:32,University_Park
+309,26UP00619,1,02/06/2026 06:52 PM,02/05/2026 12:00 AM,02/06/2026 06:52 PM,Assisted an outside law enforcement agency with an investigation,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+311,26UP00615,1,02/06/2026 05:07 PM,02/06/2026 05:07 PM,02/06/2026 05:40 PM,Employee reported a concern for another student,STUDENT HEALTH CENTER,2026-02-18 21:43:32,University_Park
+313,26UP00616,1,02/06/2026 04:42 PM,02/06/2026 08:00 AM,02/06/2026 04:00 PM,Employee reported being harassed,N BURROWES RD,2026-02-18 21:43:32,University_Park
+317,26UP00612,1,02/06/2026 03:05 PM,02/06/2026 03:05 PM,02/06/2026 03:40 PM,Student reported suspicious activity,STUART HALL,2026-02-18 21:43:32,University_Park
+322,26UP00611,1,02/06/2026 01:12 PM,02/06/2026 01:12 PM,02/06/2026 01:52 PM,Student reported a two vehicle crash with no injuries,POWER PLANT,2026-02-18 21:43:32,University_Park
+323,26UP00610,1,02/06/2026 01:03 PM,02/06/2026 01:03 PM,02/06/2026 01:41 PM,Assisted the fire department with a reported fire alarm activation,RESEARCH DR,2026-02-18 21:43:32,University_Park
+331,26UP00609,1,02/06/2026 07:44 AM,02/06/2026 06:15 AM,,Employee reported a suspicious odor,ORANGE A KATZ LOT,2026-02-18 21:43:32,University_Park
+332,26UP00608,1,02/06/2026 07:38 AM,02/06/2026 07:38 AM,02/06/2026 08:30 AM,Visitor reported a two vehicle crash with no injuries,HOSPITAL DR,2026-02-18 21:43:32,University_Park
+335,26UP00607,1,02/06/2026 03:51 AM,02/06/2026 03:51 AM,02/06/2026 05:22 AM,Assisted an outside law enforcement agency with an investigation,HETZEL ST,2026-02-18 21:43:32,University_Park
+336,26UP00606,1,02/06/2026 02:43 AM,02/06/2026 02:43 AM,02/06/2026 03:09 AM,Underage student observed highly intoxicated and transported to the hospital,TENER HALL,2026-02-18 21:43:32,University_Park
+339,26UP00602,1,02/06/2026 12:11 AM,02/06/2026 12:11 AM,02/06/2026 12:30 AM,Student observed highly intoxicated and transported to the hospital,MCELWAIN HALL,2026-02-18 21:43:32,University_Park
+344,26UP00592,1,02/05/2026 06:21 PM,02/05/2026 06:21 PM,02/05/2026 07:06 PM,Student reported suspicious odor,HOLMES HALL,2026-02-18 21:43:32,University_Park
+345,26UP00591,1,02/05/2026 06:14 PM,01/10/2026 12:00 AM,02/05/2026 07:38 PM,Student reported the theft of their unsecured / unattended personal property,CHACE HALL,2026-02-18 21:43:32,University_Park
+347,26UP00590,1,02/05/2026 05:54 PM,01/30/2026 12:00 AM,01/31/2026 12:00 AM,Assisted an outside agency with a reported Clery crime at an off campus location,ON CAMPUS PROPERTY,2026-02-18 21:43:32,University_Park
+356,26UP00588,1,02/05/2026 02:34 PM,02/05/2026 01:31 PM,02/05/2026 03:30 PM,Student reported a bicycle crash with injuries,WILLARD BLDG,2026-02-18 21:43:32,University_Park
+357,26UP00586,1,02/05/2026 02:19 PM,02/04/2026 04:19 PM,02/04/2026 05:00 PM,Employee reported suspicious activity,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+361,26UP00585,1,02/05/2026 12:11 PM,01/31/2026 01:10 PM,01/31/2026 03:07 PM,Visitor reported the theft of their unattended personal property,COMMUTER JORDAN EAST 2 LOT,2026-02-18 21:43:32,University_Park
+362,26UP00583,1,02/05/2026 11:48 AM,02/04/2026 02:15 PM,,Student reported a two vehicle crash with no injuries,EAST PARKING DECK,2026-02-18 21:43:32,University_Park
+363,26UP00582,1,02/05/2026 11:24 AM,02/05/2026 01:45 AM,02/05/2026 10:30 AM,Employee reported damage to University property,HASTINGS HALL,2026-02-18 21:43:32,University_Park
+368,26UP00581,1,02/05/2026 08:12 AM,02/05/2026 08:12 AM,02/05/2026 03:50 PM,Student requested assistance with a personal matter,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+371,26UP00580,1,02/05/2026 05:36 AM,02/05/2026 05:36 AM,02/05/2026 06:05 AM,Student stopped and found in possession of drug paraphernalia,E PARK AVE & HOSPITAL DR,2026-02-18 21:43:32,University_Park
+372,26UP00579,1,02/05/2026 02:06 AM,02/05/2026 01:30 AM,02/05/2026 02:45 AM,Underage student observed highly intoxicated,HIESTER HALL,2026-02-18 21:43:32,University_Park
+373,26UP00578,1,02/05/2026 01:20 AM,02/04/2026 11:00 PM,02/05/2026 02:38 AM,Student reported a concern for another student,BEAVER HALL,2026-02-18 21:43:32,University_Park
+376,26UP00577,1,02/05/2026 12:27 AM,02/05/2026 12:27 AM,02/05/2026 01:00 AM,Underage student observed highly intoxicated,PENNYPACKER HALL,2026-02-18 21:43:32,University_Park
+380,26UP00574,1,02/04/2026 08:19 PM,02/04/2026 08:19 PM,02/04/2026 08:56 PM,Employee reported damage to University property,STUART HALL,2026-02-18 21:43:32,University_Park
+385,26UP00572,1,02/04/2026 04:04 PM,08/30/2025 12:00 PM,08/30/2025 06:00 PM,Student reported they were indecently assaulted by a known person at a University Building,BEAVER STADIUM,2026-02-18 21:43:32,University_Park
+386,26UP00571,1,02/04/2026 03:53 PM,02/04/2026 03:53 PM,02/04/2026 03:59 PM,Employee requested assistance with a civil matter,HUB PARKING DECK,2026-02-18 21:43:32,University_Park
+395,26UP00570,1,02/04/2026 11:30 AM,02/04/2026 11:30 AM,02/04/2026 01:59 PM,Assisted the ambulance with a medical emergency,RESEARCH DR,2026-02-18 21:43:32,University_Park
+396,26UP00569,1,02/04/2026 11:23 AM,02/04/2026 11:23 AM,02/04/2026 12:55 PM,Assisted an outside law enforcement agency with an investigation,E PARK AVE & HOSPITAL DR,2026-02-18 21:43:32,University_Park
+397,26UP00568,1,02/04/2026 11:18 AM,02/04/2026 09:40 AM,02/04/2026 11:20 AM,Student reported a hit and run vehicle crash,NITTANY PARKING,2026-02-18 21:43:32,University_Park
+399,26UP00567,1,02/04/2026 10:56 AM,02/04/2026 10:41 AM,,Employee reported theft of services,EAST PARKING DECK,2026-02-18 21:43:32,University_Park
+411,26UP00564,1,02/03/2026 08:36 PM,02/03/2026 08:36 PM,02/03/2026 11:08 PM,Assisted an outside law enforcement agency with an investigation,KIRKBRIDE DR,2026-02-18 21:43:32,University_Park
+419,26UP00563,1,02/03/2026 03:46 PM,12/23/2025 04:00 PM,01/21/2026 04:00 PM,Student reported the theft of University property,HAMMOND BLDG,2026-02-18 21:43:32,University_Park
+420,26UP00562,1,02/03/2026 03:44 PM,02/03/2026 03:44 PM,02/03/2026 04:23 PM,Student reported damage to personal property,GRUBB HALL,2026-02-18 21:43:32,University_Park
+423,26UP00559,1,02/03/2026 02:31 PM,02/02/2026 02:15 PM,02/02/2026 02:20 PM,Student reported a hit and run vehicle crash,HUB ROBESON CULTURAL CENTER,2026-02-18 21:43:32,University_Park
+424,26UP00561,1,02/03/2026 02:12 PM,01/28/2026 08:12 AM,02/03/2026 02:52 PM,Employee reported unauthorized/fraudulent activity on a University account,HUB ROBESON CULTURAL CENTER,2026-02-18 21:43:32,University_Park
+428,26UP00557,1,02/03/2026 01:06 PM,01/29/2026 02:49 PM,,Assisted an employee with an administrative matter,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+429,26UP00555,1,02/03/2026 12:17 PM,02/02/2026 04:00 AM,02/03/2026 12:42 PM,Employee reported being harassed,MUELLER LAB,2026-02-18 21:43:32,University_Park
+430,26UP00556,1,02/03/2026 12:11 PM,02/03/2026 12:11 PM,02/03/2026 01:08 PM,Visitor reported a University policy violation,WILLARD BLDG,2026-02-18 21:43:32,University_Park
+436,26UP00552,1,02/03/2026 09:11 AM,02/02/2026 08:00 PM,02/02/2026 09:00 PM,Student requested assistance with an administrative matter,WARTIK LAB,2026-02-18 21:43:32,University_Park
+441,26UP00550,1,02/03/2026 01:51 AM,02/03/2026 01:51 AM,02/03/2026 02:45 AM,Underage students observed highly intoxicated,MARTIN HALL,2026-02-18 21:43:32,University_Park
+442,26UP00546,1,02/02/2026 11:31 PM,02/02/2026 11:31 PM,02/02/2026 11:53 PM,Student observed highly intoxicated and transported to the hospital,BEAVER HALL,2026-02-18 21:43:32,University_Park
+444,26UP00539,1,02/02/2026 10:03 PM,02/02/2026 09:20 PM,02/02/2026 10:20 PM,Student requested assistance with a civil matter,NITTANY APT,2026-02-18 21:43:32,University_Park
+448,26UP00537,1,02/02/2026 07:53 PM,02/01/2026 10:45 AM,02/01/2026 11:48 AM,Visitor reported disorderly persons,PEGULA ICE ARENA,2026-02-18 21:43:32,University_Park
+449,26UP00536,1,02/02/2026 06:38 PM,02/02/2026 05:30 PM,02/02/2026 06:30 PM,Student reported being harassed,INTRAMURAL BLDG,2026-02-18 21:43:32,University_Park
+450,26UP00535,1,02/02/2026 06:08 PM,02/02/2026 06:08 PM,02/02/2026 06:29 PM,Assisted the fire department with a reported fire alarm activation,BEAVER STADIUM,2026-02-18 21:43:32,University_Park
+456,26UP00533,1,02/02/2026 04:42 PM,02/02/2026 04:42 PM,02/02/2026 04:45 PM,Assisted an outside law enforcement agency with an investigation,EARLYSTOWN RD,2026-02-18 21:43:32,University_Park
+458,26UP00532,1,02/02/2026 02:52 PM,09/02/2022 02:52 PM,05/02/2023 02:52 PM,Assisted an outside law enforcement agency with an investigation,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+460,26UP00531,1,02/02/2026 12:10 PM,01/29/2026 08:00 AM,01/29/2026 11:09 AM,Student reported the loss or theft of their unsecured personal property,HOSLER BLDG,2026-02-18 21:43:32,University_Park
+462,26UP00530,1,02/02/2026 10:04 AM,01/31/2026 07:30 PM,01/31/2026 08:19 PM,Student reported a suspicious odor,BEAVER HALL,2026-02-18 21:43:32,University_Park
+470,26UP00528,1,02/02/2026 08:14 AM,02/02/2026 08:00 AM,,Employee reported a traffic complaint,EAST PARKING DECK,2026-02-18 21:43:32,University_Park
+471,26UP00529,1,02/02/2026 08:01 AM,02/02/2026 08:01 AM,02/02/2026 08:30 AM,Visitor reported a concern for a student,BEAVER HALL,2026-02-18 21:43:32,University_Park
+477,26UP00525,1,02/01/2026 11:28 PM,02/01/2026 08:35 PM,02/01/2026 09:00 PM,Student reported the theft of their unattended personal property,STEPHENS HALL,2026-02-18 21:43:32,University_Park
+480,26UP00524,1,02/01/2026 09:25 PM,02/01/2026 08:58 PM,,Student reported a two vehicle crash with no injuries,LOT 83 (B) LOT,2026-02-18 21:43:32,University_Park
+481,26UP00518,1,02/01/2026 05:56 PM,01/30/2026 03:45 PM,01/30/2026 04:45 PM,Student requested assistance with a personal matter,POLLOCK HALL,2026-02-18 21:43:32,University_Park
+489,26UP00516,1,02/01/2026 02:19 PM,02/01/2026 02:19 PM,02/01/2026 03:28 PM,Visitor requested the assistance in locating a student,THOMPSON HALL,2026-02-18 21:43:32,University_Park
+490,26UP00515,1,02/01/2026 02:03 PM,01/28/2026 12:00 AM,01/30/2026 11:59 PM,Student reported damage to their privately owned vehicle,WEST DECK,2026-02-18 21:43:32,University_Park
+491,26UP00514,1,02/01/2026 01:41 PM,02/01/2026 01:41 PM,02/01/2026 02:15 PM,Student requested assistance with a personal matter,WARING HALL,2026-02-18 21:43:32,University_Park
+492,26UP00513,1,02/01/2026 01:39 PM,10/01/2025 12:00 AM,02/01/2026 01:39 PM,Student reported a suspicious person,ATHERTON HALL,2026-02-18 21:43:32,University_Park
+494,26UP00512,1,02/01/2026 12:40 PM,02/01/2026 12:40 PM,02/01/2026 03:50 PM,Student reported a concern for another student,NELSON HALL,2026-02-18 21:43:32,University_Park
+502,26UP00506,1,02/01/2026 01:51 AM,02/01/2026 01:51 AM,,A vehicle stop investigation revealed the operator to be driving under the influence of alcohol,N ATHERTON ST & W PARK AVE,2026-02-18 21:43:32,University_Park
+503,26UP00511,1,02/01/2026 01:38 AM,02/01/2026 01:38 AM,02/01/2026 02:52 AM,Underage student observed highly intoxicated,MCELWAIN HALL,2026-02-18 21:43:32,University_Park
+508,26UP00500,1,01/31/2026 06:33 PM,01/31/2026 06:33 PM,01/31/2026 07:19 PM,Student reported a two vehicle crash with no injuries,E PARK AVE & AMBASSADOR WAY,2026-02-18 21:43:32,University_Park
+509,26UP00499,1,01/31/2026 05:23 PM,01/31/2026 05:23 PM,01/31/2026 05:33 PM,Visitor reported a hit and run vehicle crash,FOOTBALL LOT,2026-02-18 21:43:32,University_Park
+510,26UP00497,1,01/31/2026 04:44 PM,01/31/2026 04:12 PM,01/31/2026 04:44 PM,Visitor reported being harassed,BEAVER STADIUM,2026-02-18 21:43:32,University_Park
+514,26UP00496,1,01/31/2026 02:17 PM,01/31/2026 01:54 PM,01/31/2026 02:20 PM,Officer observed student engaged in disorderly behavior,BEAVER STADIUM,2026-02-18 21:43:32,University_Park
+515,26UP00495,1,01/31/2026 02:10 PM,01/31/2026 02:10 PM,01/31/2026 02:40 PM,Underage student observed highly intoxicated and transported to the hospital,HOYT HALL,2026-02-18 21:43:32,University_Park
+516,26UP00494,1,01/31/2026 01:58 PM,01/31/2026 01:58 PM,01/31/2026 02:24 PM,Student observed highly intoxicated,STADIUM WEST RD,2026-02-18 21:43:32,University_Park
+517,26UP00493,1,01/31/2026 01:49 PM,01/31/2026 01:49 PM,01/31/2026 02:55 PM,Underage student observed highly intoxicated and transported to the hospital,HOYT HALL,2026-02-18 21:43:32,University_Park
+518,26UP00492,1,01/31/2026 01:41 PM,01/31/2026 01:41 PM,01/31/2026 01:51 PM,Assisted an outside law enforcement agency with an investigation,BEAVER STADIUM,2026-02-18 21:43:32,University_Park
+519,26UP00491,1,01/31/2026 12:42 PM,01/31/2026 12:42 PM,01/31/2026 04:00 PM,Assisted an employee with an administrative matter,INTRAMURAL BLDG,2026-02-18 21:43:32,University_Park
+520,26UP00490,1,01/31/2026 12:19 PM,01/31/2026 12:17 PM,01/31/2026 12:18 PM,Employee  reported a one vehicle crash with no injuries,NITTANY PARKING,2026-02-18 21:43:32,University_Park
+521,26UP00489,1,01/31/2026 12:05 PM,01/31/2026 12:05 PM,01/31/2026 01:40 PM,Underage student observed highly intoxicated and transportedto the hospital,REDIFER HALL,2026-02-18 21:43:32,University_Park
+524,26UP00486,1,01/31/2026 10:08 AM,01/31/2026 08:49 AM,,Student reported suspicious activity,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+526,26UP00487,1,01/31/2026 09:12 AM,01/31/2026 09:12 AM,01/31/2026 12:45 PM,Assisted an outside law enforcement agency with an investigation,LOGAN AVE,2026-02-18 21:43:32,University_Park
+528,26UP00484,1,01/31/2026 08:24 AM,01/31/2026 08:24 AM,,Citations issued/Charges filed on University property by outside law enforcement agencies,BEAVER STADIUM,2026-02-18 21:43:32,University_Park
+532,26UP00483,1,01/31/2026 05:59 AM,01/31/2026 05:59 AM,01/31/2026 04:30 PM,The Penn State Bomb Squad provided counter IED support for the Penn State vs Michigan State outdoor ice hockey game,BEAVER STADIUM,2026-02-18 21:43:32,University_Park
+534,26UP00482,1,01/31/2026 01:36 AM,01/31/2026 01:36 AM,,A vehicle stop investigation revealed the operator to be driving under the influence of alcohol,N BURROWES RD,2026-02-18 21:43:32,University_Park
+539,26UP00480,1,01/31/2026 12:46 AM,01/30/2026 10:30 PM,01/31/2026 11:56 PM,Student reported being harassed,EARLE HALL,2026-02-18 21:43:32,University_Park
+541,26UP00474,1,01/30/2026 06:39 PM,01/30/2026 06:00 PM,01/30/2026 07:33 PM,Officer conducted a security inspection,BEAVER STADIUM,2026-02-18 21:43:32,University_Park
+542,26UP00475,1,01/30/2026 05:25 PM,01/30/2026 05:25 PM,01/30/2026 07:01 PM,Received this department's copy of a Protection From Abuse (PFA) order,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+544,26UP00470,1,01/30/2026 03:18 PM,01/30/2026 03:18 PM,01/30/2026 04:00 PM,Assisted a student with a personal matter,STUDENT HEALTH CENTER,2026-02-18 21:43:32,University_Park
+546,26UP00469,1,01/30/2026 01:14 PM,01/30/2026 01:14 PM,01/30/2026 02:43 PM,Student requested assistance with a personal matter,YOUNG HALL,2026-02-18 21:43:32,University_Park
+547,26UP00467,1,01/30/2026 01:12 PM,01/30/2026 01:12 PM,01/30/2026 01:24 PM,Assisted the ambulance with a medical emergency,INNOVATION BLVD,2026-02-18 21:43:32,University_Park
+548,26UP00468,1,01/30/2026 12:51 PM,01/30/2026 12:51 PM,01/30/2026 01:30 PM,Student requested assistance in locating another student,SIMMONS HALL,2026-02-18 21:43:32,University_Park
+557,26UP00464,1,01/30/2026 02:52 AM,01/30/2026 02:45 AM,01/30/2026 03:00 AM,Underage student observed highly intoxicated and transported to the hospital,REDIFER HALL,2026-02-18 21:43:32,University_Park
+563,26UP00452,1,01/29/2026 09:16 PM,01/29/2026 09:16 PM,01/29/2026 09:26 PM,Student found in possession of counterfeit identification card,N ATHERTON ST (RAILROAD AVE - WHITE COURSE DR),2026-02-18 21:43:32,University_Park
+566,26UP00451,1,01/29/2026 08:55 PM,01/29/2026 05:00 PM,01/29/2026 08:55 PM,Assisted an outside law enforcement agency with an investigation,BRYCE JORDAN CENTER,2026-02-18 21:43:32,University_Park
+567,26UP00450,1,01/29/2026 08:26 PM,01/29/2026 08:16 PM,01/29/2026 08:27 PM,Employee reported abandoned property,OSMOND LAB,2026-02-18 21:43:32,University_Park
+569,26UP00449,1,01/29/2026 06:50 PM,01/29/2026 06:50 PM,01/29/2026 07:53 PM,Employee reported a two vehicle crash with no injuries,DAUER DR & UNIVERSITY DR,2026-02-18 21:43:32,University_Park
+570,26UP00448,1,01/29/2026 06:31 PM,01/29/2026 06:31 PM,01/29/2026 06:51 PM,Visitor reported a two vehicle crash with no injuries,FOOTBALL SHIELDS ADA LOT,2026-02-18 21:43:32,University_Park
+571,26UP00447,1,01/29/2026 06:16 PM,01/29/2026 06:00 PM,01/29/2026 06:16 PM,Visitor reported accidental damage to personal property,COMMUTER JORDAN SOUTH LOT,2026-02-18 21:43:32,University_Park
+578,26UP00443,1,01/29/2026 12:21 PM,01/29/2026 12:21 PM,01/29/2026 01:27 PM,Officer conducted a security inspection,BRYCE JORDAN CENTER,2026-02-18 21:43:32,University_Park
+579,26UP00442,1,01/29/2026 12:06 PM,01/29/2026 12:06 PM,01/29/2026 01:05 PM,Assisted an outside law enforcement agency with an investigation,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+580,26UP00441,1,01/29/2026 11:56 AM,06/01/2024 02:56 AM,06/13/2024 11:00 PM,Assisted an employee with an administrative matter,SCIENCE PARK RD,2026-02-18 21:43:32,University_Park
+584,26UP00439,1,01/29/2026 09:09 AM,01/29/2026 09:09 AM,01/29/2026 10:00 AM,Officer conducted a pre-employment background investigation,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+589,26UP00438,1,01/28/2026 11:54 PM,01/28/2026 11:54 PM,01/29/2026 12:30 AM,Employee reported a fire alarm activation,STUART HALL,2026-02-18 21:43:32,University_Park
+590,26UP00436,1,01/28/2026 10:29 PM,01/28/2026 08:00 PM,01/28/2026 08:08 PM,Assisted Residence Life staff with a University policy violation,STUART HALL,2026-02-18 21:43:32,University_Park
+594,26UP00434,1,01/28/2026 08:17 PM,01/28/2026 08:17 PM,01/28/2026 09:00 PM,Student reported a concern for another student,PENNYPACKER HALL,2026-02-18 21:43:32,University_Park
+596,26UP00432,1,01/28/2026 07:54 PM,01/28/2026 01:29 AM,01/28/2026 10:36 PM,Student reported suspicious persons,STONE HALL,2026-02-18 21:43:32,University_Park
+598,26UP00431,1,01/28/2026 07:39 PM,01/28/2026 07:39 PM,01/28/2026 08:02 PM,Assisted the fire department with a reported fire/smoke condition,EAST PARKING DECK,2026-02-18 21:43:32,University_Park
+599,26UP00430,1,01/28/2026 07:36 PM,01/28/2026 07:36 PM,01/28/2026 07:49 PM,Student reported a fire,WATER RECLAMATION DR,2026-02-18 21:43:32,University_Park
+600,26UP00429,1,01/28/2026 07:30 PM,01/28/2026 07:30 PM,01/28/2026 08:15 PM,Student reported being harassed,STUART HALL,2026-02-18 21:43:32,University_Park
+603,26UP00428,1,01/28/2026 06:43 PM,01/28/2026 06:43 PM,01/28/2026 07:15 PM,Assisted a student with a personal matter,BEAM HALL,2026-02-18 21:43:32,University_Park
+609,26UP00423,1,01/28/2026 02:36 PM,01/28/2026 01:36 PM,01/28/2026 02:36 PM,Assisted an outside law enforcement agency with an investigation,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+611,26UP00422,1,01/28/2026 01:35 PM,01/28/2026 01:35 PM,01/28/2026 03:07 PM,Employee reported a concern for another student,BOUCKE BLDG,2026-02-18 21:43:32,University_Park
+612,26UP00421,1,01/28/2026 01:14 PM,01/28/2026 01:14 PM,01/28/2026 01:55 PM,Visitor reported a concern for another student,ON CAMPUS PROPERTY,2026-02-18 21:43:32,University_Park
+619,26UP00420,1,01/28/2026 11:18 AM,05/08/2025 11:18 AM,07/04/2025 12:00 AM,Visitor reported the theft of their personal property,HARRIS HALL,2026-02-18 21:43:32,University_Park
+620,26UP00419,1,01/28/2026 10:57 AM,01/27/2026 12:00 AM,01/27/2026 01:00 AM,Assisted an outside law enforcement agency with an investigation,OFF CAMPUS FRATERNITY,2026-02-18 21:43:32,University_Park
+623,26UP00418,1,01/28/2026 10:09 AM,01/28/2026 10:09 AM,01/28/2026 11:54 AM,Visitor reported being harassed,UNKNOWN LOCATION,2026-02-18 21:43:32,University_Park
+624,26UP00417,1,01/28/2026 09:08 AM,01/28/2026 09:08 AM,01/28/2026 11:00 AM,Assisted an outside law enforcement agency with an investigation,WILLARD BLDG,2026-02-18 21:43:32,University_Park
+626,26UP00416,1,01/28/2026 05:13 AM,01/28/2026 05:13 AM,01/28/2026 05:55 AM,Assisted the fire department with a reported fire alarm,BEAVER STADIUM,2026-02-18 21:43:32,University_Park
+627,26UP00415,1,01/28/2026 02:20 AM,01/28/2026 02:20 AM,01/28/2026 02:33 AM,Assisted Residence Life staff with a University policy violation,BEAVER HALL,2026-02-18 21:43:32,University_Park
+631,26UP00414,1,01/27/2026 11:35 PM,01/27/2026 11:35 PM,01/28/2026 12:15 AM,Student requested assistance with a personal matter,IRVIN HALL,2026-02-18 21:43:32,University_Park
+633,26UP00412,1,01/27/2026 08:15 PM,01/27/2026 08:15 PM,01/27/2026 10:06 PM,Assisted a visitor with a personal matter,E PARK AVE (BIGLER RD - UNIVERSITY DR),2026-02-18 21:43:32,University_Park
+635,26UP00413,1,01/27/2026 07:56 PM,01/27/2026 04:31 PM,01/27/2026 07:00 PM,Employee reported a hit and run vehicle crash,HUB PARKING DECK,2026-02-18 21:43:32,University_Park
+636,26UP00411,1,01/27/2026 07:29 PM,01/27/2026 07:29 PM,01/27/2026 07:39 PM,Student requested assistance with a personal matter,LOT 83 (B) LOT,2026-02-18 21:43:32,University_Park
+637,26UP00410,1,01/27/2026 05:09 PM,01/25/2026 02:00 AM,01/25/2026 10:00 AM,Student reported they were sexually assaulted by a known person in a residence hall,SOUTH HALLS RESIDENCE COMPLEX,2026-02-18 21:43:32,University_Park
+638,26UP00408,1,01/27/2026 05:00 PM,01/25/2026 07:00 AM,01/27/2026 05:38 PM,Visitor reported suspicious activity,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+656,26UP00406,1,01/27/2026 09:36 AM,01/27/2026 09:36 AM,,Assisted an outside law enforcement agency with an investigation,UNIVERSITY DR,2026-02-18 21:43:32,University_Park
+657,26UP00407,1,01/27/2026 09:34 AM,01/27/2026 09:34 AM,01/27/2026 10:41 AM,Employee reported a University policy violation,ERIC J. BARRON INNOVATION HUB BUILDING,2026-02-18 21:43:32,University_Park
+659,26UP00405,1,01/27/2026 08:25 AM,01/20/2026 04:50 PM,01/20/2026 05:01 PM,Employee reported the theft of University property,REDIFER HALL,2026-02-18 21:43:32,University_Park
+662,26UP00404,1,01/27/2026 02:39 AM,01/27/2026 02:39 AM,01/27/2026 02:49 AM,Visitor reported being harassed,UNKNOWN LOCATION,2026-02-18 21:43:32,University_Park
+667,26UP00403,1,01/26/2026 09:55 PM,01/26/2026 09:55 PM,01/26/2026 10:30 PM,Employee reported disorderly persons,EAST PARKING DECK,2026-02-18 21:43:32,University_Park
+669,26UP00402,1,01/26/2026 09:36 PM,01/26/2026 09:36 PM,01/26/2026 09:50 PM,Assisted an outside law enforcement agency with an investigation,SQUIRREL DR,2026-02-18 21:43:32,University_Park
+670,26UP00401,1,01/26/2026 09:07 PM,01/26/2026 09:07 PM,01/26/2026 09:44 PM,"Resident Assistant reported the odor of marijuana, origin not located",ATHERTON HALL,2026-02-18 21:43:32,University_Park
+671,26UP00400,1,01/26/2026 09:06 PM,01/26/2026 07:20 PM,01/26/2026 07:50 PM,Assisted an outside law enforcement agency with an investigation,E COLLEGE AVE & S ALLEN ST,2026-02-18 21:43:32,University_Park
+675,26UP00398,1,01/26/2026 03:25 PM,01/26/2026 05:30 AM,01/26/2026 05:31 AM,Employee reported a one vehicle accident with no injuries,WATTS HALL,2026-02-18 21:43:32,University_Park
+676,26UP00396,1,01/26/2026 03:23 PM,01/22/2026 07:30 PM,01/24/2026 06:50 PM,Assisted an outside law enforcement agency with an investigation,E NITTANY AVE,2026-02-18 21:43:32,University_Park
+677,26UP00397,1,01/26/2026 03:08 PM,01/25/2026 04:08 PM,01/26/2026 03:46 PM,Employee reported damage to University property,STUART HALL,2026-02-18 21:43:32,University_Park
+679,26UP00395,1,01/26/2026 02:21 PM,01/26/2026 02:21 PM,01/26/2026 03:45 PM,Visitor requested assistance in locating a student,MILLER HALL,2026-02-18 21:43:32,University_Park
+687,26UP00394,1,01/26/2026 01:55 AM,01/26/2026 12:01 AM,01/26/2026 02:32 AM,Employee reported disorderly persons,PACKER HALL,2026-02-18 21:43:32,University_Park
+692,26UP00393,1,01/25/2026 05:10 PM,01/25/2026 04:30 PM,01/25/2026 05:10 PM,Assisted the ambulance with a medical emergency,HUB LAWN,2026-02-18 21:43:32,University_Park
+696,26UP00392,1,01/25/2026 03:41 PM,01/25/2026 03:41 PM,01/25/2026 03:49 PM,Employee reported the reckless operation of vehicles,KATZ BLDG,2026-02-18 21:43:32,University_Park
+700,26UP00391,1,01/25/2026 06:30 AM,01/25/2026 04:35 AM,01/25/2026 06:15 AM,Employee reported a person trespassing inside a restricted area,BEAVER STADIUM,2026-02-18 21:43:32,University_Park
+704,26UP00390,1,01/25/2026 12:21 AM,01/25/2026 12:21 AM,01/25/2026 12:55 AM,Underage student observed highly intoxicated and transported to the hospital,SNYDER HALL,2026-02-18 21:43:32,University_Park
+705,26UP00389,1,01/24/2026 09:55 PM,01/24/2026 09:55 PM,01/24/2026 10:30 PM,Employee reported unsafe conditions,BEAVER HALL,2026-02-18 21:43:32,University_Park
+707,26UP00388,1,01/24/2026 08:15 PM,01/19/2026 08:30 PM,01/24/2026 08:15 PM,Student reported damage to University property,PINCHOT HALL,2026-02-18 21:43:32,University_Park
+710,26UP00387,1,01/24/2026 05:44 PM,01/24/2026 09:44 AM,01/24/2026 05:44 PM,Student reported the loss of their unattended personal property,FOREST RESOURCES BLDG,2026-02-18 21:43:32,University_Park
+711,26UP00386,1,01/24/2026 05:29 PM,01/24/2026 05:29 PM,01/24/2026 06:00 PM,"Resident Assistant reported the odor of marijuana, origin not located",TENER HALL,2026-02-18 21:43:32,University_Park
+712,26UP00385,1,01/24/2026 04:55 PM,01/24/2026 04:55 PM,01/24/2026 05:29 PM,Student requested assistance with a personal matter,WHITE BLDG,2026-02-18 21:43:32,University_Park
+714,26UP00384,1,01/24/2026 03:35 PM,01/24/2026 03:35 PM,01/24/2026 03:57 PM,"Resident Assistant reported the odor of marijuana, origin not located",SIMMONS HALL,2026-02-18 21:43:32,University_Park
+715,26UP00383,1,01/24/2026 03:31 PM,01/23/2026 07:00 PM,01/23/2026 11:00 PM,Student reported abandoned property,BRYCE JORDAN CENTER,2026-02-18 21:43:32,University_Park
+724,26UP00382,1,01/24/2026 10:48 AM,01/23/2026 10:00 AM,01/23/2026 01:00 PM,Student reported the theft of their unattended personal property,ERIC J. BARRON INNOVATION HUB BUILDING,2026-02-18 21:43:32,University_Park
+728,26UP00381,1,01/24/2026 08:20 AM,01/24/2026 08:20 AM,01/24/2026 08:50 AM,Student reported a two vehicle crash with no injuries,HUB PARKING DECK,2026-02-18 21:43:32,University_Park
+729,26UP00380,1,01/24/2026 06:39 AM,01/24/2026 06:39 AM,01/24/2026 07:40 AM,Assisted Residence Life staff with a University policy violation,FINDLAY HALL,2026-02-18 21:43:32,University_Park
+731,26UP00378,1,01/24/2026 05:23 AM,01/24/2026 05:20 AM,01/24/2026 05:23 AM,Student reported damage to University property,GEARY HALL,2026-02-18 21:43:32,University_Park
+732,26UP00379,1,01/24/2026 05:13 AM,01/24/2026 05:13 AM,01/24/2026 06:28 AM,Student reported persons trespassing inside a residence hall,SNYDER HALL,2026-02-18 21:43:32,University_Park
+733,26UP00377,1,01/24/2026 03:11 AM,01/24/2026 03:11 AM,01/24/2025 03:36 AM,Student observed highly intoxicated and transported to the hospital,PINCHOT HALL,2026-02-18 21:43:32,University_Park
+734,26UP00376,1,01/24/2026 02:59 AM,01/24/2026 02:59 AM,01/24/2026 03:17 AM,Underage student observed highly intoxicated and transported to the hospital,BIGLER RD & MILLENNIUM DR,2026-02-18 21:43:32,University_Park
+735,26UP00375,1,01/24/2026 02:05 AM,01/24/2026 02:00 AM,01/24/2026 02:05 AM,Assisted an outside law enforcement agency with an investigation,W COLLEGE AVE,2026-02-18 21:43:32,University_Park
+737,26UP00374,1,01/24/2026 01:25 AM,01/24/2026 01:25 AM,01/24/2026 02:23 AM,Student observed highly intoxicated and transported to the hospital,EARLE HALL,2026-02-18 21:43:32,University_Park
+741,26UP00368,1,01/24/2026 12:06 AM,01/24/2026 12:06 AM,,Underage student observed highly intoxicated,CURTIN RD & SHORTLIDGE RD,2026-02-18 21:43:32,University_Park
+742,26UP00367,1,01/24/2026 12:02 AM,01/24/2026 12:02 AM,01/24/2026 12:47 AM,Assisted an outside law enforcement agency with an investigation,W COLLEGE AVE & N PATTERSON ST,2026-02-18 21:43:32,University_Park
+746,26UP00363,1,01/23/2026 11:00 PM,01/23/2026 09:00 PM,01/23/2026 11:12 PM,Employee reported suspicious activity,BRYCE JORDAN CENTER,2026-02-18 21:43:32,University_Park
+748,26UP00354,1,01/23/2026 08:52 PM,01/23/2026 08:52 PM,,Underage student observed highly intoxicated,BRYCE JORDAN CENTER,2026-02-18 21:43:32,University_Park
+749,26UP00353,1,01/23/2026 08:23 PM,01/23/2026 08:23 PM,,Assisted Residence Life staff with a University policy violation,BIGLER HALL,2026-02-18 21:43:32,University_Park
+750,26UP00352,1,01/23/2026 07:43 PM,01/23/2026 07:43 PM,01/23/2026 07:45 PM,Assisted an outside law enforcement agency with an investigation,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+751,26UP00351,1,01/23/2026 07:29 PM,01/23/2026 07:29 PM,01/23/2026 07:46 PM,Visitor requested assistance with a personal matter,NITTANY PARKING,2026-02-18 21:43:32,University_Park
+753,26UP00350,1,01/23/2026 04:45 PM,01/23/2026 04:45 PM,,Received this department's copy of a Protection From Abuse (PFA) order,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+754,26UP00348,1,01/23/2026 04:41 PM,01/23/2026 04:41 PM,01/23/2026 05:15 PM,Received this department's copy of a Protection From Abuse (PFA) order,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+758,26UP00347,1,01/23/2026 03:14 PM,12/01/2025 12:00 AM,01/23/2026 05:49 PM,Employee reported suspicious person,ERIC J. BARRON INNOVATION HUB BUILDING,2026-02-18 21:43:32,University_Park
+760,26UP00343,1,01/23/2026 02:14 PM,01/22/2026 02:02 PM,01/23/2026 02:14 PM,Employee reported suspicious activity,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+762,26UP00342,1,01/23/2026 02:00 PM,01/23/2026 02:00 PM,01/23/2026 02:47 PM,Employee reported accidental damage to a privately owned vehicle,MEATS LAB,2026-02-18 21:43:32,University_Park
+767,26UP00341,1,01/23/2026 09:15 AM,01/23/2026 09:15 AM,01/23/2026 09:30 AM,Assisted the fire department with a reported smoke condition/fire alarmactivation,GRUBB HALL,2026-02-18 21:43:32,University_Park
+770,26UP00340,1,01/23/2026 04:02 AM,01/23/2026 04:02 AM,01/23/2026 05:43 AM,Officer conducted a security inspection,ADLER ATHLETIC COMPLEX,2026-02-18 21:43:32,University_Park
+775,26UP00336,1,01/22/2026 10:29 PM,01/22/2026 10:29 PM,01/22/2026 11:00 PM,Student observed highly intoxicated and transported to the hospital,W BEAVER AVE,2026-02-18 21:43:32,University_Park
+777,26UP00328,1,01/22/2026 08:09 PM,01/22/2026 08:09 PM,01/22/2026 08:21 PM,Student requested assistance with an administrative matter,GEARY HALL,2026-02-18 21:43:32,University_Park
+778,26UP00329,1,01/22/2026 08:08 PM,01/22/2026 08:08 PM,01/22/2026 08:34 PM,Received this department's copy of a Protection From Abuse (PFA) order,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+781,26UP00326,1,01/22/2026 04:20 PM,01/22/2026 01:53 PM,01/22/2026 04:39 PM,Employee reported suspicious activity,BOUCKE BLDG,2026-02-18 21:43:32,University_Park
+783,26UP00325,1,01/22/2026 03:48 PM,01/22/2026 03:48 PM,01/22/2026 04:11 PM,Visitor reported abandoned property,NITTANY PARKING,2026-02-18 21:43:32,University_Park
+785,26UP00324,1,01/22/2026 02:17 PM,01/18/2026 06:00 PM,01/18/2026 11:59 PM,Student reported being harassed,ROBINSON HALL,2026-02-18 21:43:32,University_Park
+787,26UP00321,1,01/22/2026 12:48 PM,01/22/2026 12:48 PM,01/22/2026 01:31 PM,Visitor reported being physically assaulted by a known person,AIRPORT AIR TERMINAL BLDG,2026-02-18 21:43:32,University_Park
+795,26UP00319,1,01/22/2026 08:44 AM,01/22/2026 08:44 AM,01/22/2026 08:50 AM,Visitor requested assistance in locating a student,MILLER HALL,2026-02-18 21:43:32,University_Park
+801,26UP00317,1,01/22/2026 12:17 AM,01/18/2026 11:00 PM,01/18/2025 11:00 PM,Student reported a person trespassing inside a residence hall room,PENNYPACKER HALL,2026-02-18 21:43:32,University_Park
+804,26UP00314,1,01/21/2026 11:06 PM,01/21/2026 11:06 PM,01/21/2026 11:35 PM,Employee reported a fire alarm activation,PINCHOT HALL,2026-02-18 21:43:32,University_Park
+807,26UP00313,1,01/21/2026 08:54 PM,01/21/2026 08:54 PM,01/22/2026 11:51 PM,Student reported being harassed,PENNYPACKER HALL,2026-02-18 21:43:32,University_Park
+808,26UP00312,1,01/21/2026 06:54 PM,01/21/2026 06:54 PM,,Assisted an outside law enforcement agency,MOORE BLDG,2026-02-18 21:43:32,University_Park
+809,26UP00311,1,01/21/2026 06:48 PM,01/21/2026 12:40 PM,01/21/2026 10:17 AM,Employee reported being harassed,UNKNOWN LOCATION,2026-02-18 21:43:32,University_Park
+815,26UP00309,1,01/21/2026 04:39 PM,01/18/2026 05:00 PM,01/21/2026 04:49 PM,Student reported the theft of their unattended personal property,MCELWAIN HALL,2026-02-18 21:43:32,University_Park
+817,26UP00308,1,01/21/2026 04:19 PM,01/21/2026 04:05 PM,01/21/2026 04:51 PM,Student reported a two vehicle crash with no injuries,COMMUTER JORDAN EAST 2 LOT,2026-02-18 21:43:32,University_Park
+819,26UP00307,1,01/21/2026 02:47 PM,01/21/2026 02:47 PM,01/21/2026 05:04 PM,Visitor reported suspicious activity,HASTINGS HALL,2026-02-18 21:43:32,University_Park
+821,26UP00306,1,01/21/2026 01:29 PM,01/21/2026 01:29 PM,01/21/2026 03:14 PM,Employee requested assistance with an administrative matter,BUSINESS BLDG,2026-02-18 21:43:32,University_Park
+825,26UP00304,1,01/21/2026 10:18 AM,01/20/2026 12:30 PM,01/21/2026 05:30 AM,Employee requested assistance with an administrative matter,"ANIMAL, VETERINARY, AND BIOMEDICAL SCIENCES BUILDING",2026-02-18 21:43:32,University_Park
+827,26UP00303,1,01/21/2026 10:06 AM,01/20/2026 05:24 PM,,Student reported the theft of their unsecured personal property,WHITE BLDG,2026-02-18 21:43:32,University_Park
+830,26UP00302,1,01/21/2026 12:55 AM,01/21/2026 12:55 AM,01/21/2026 01:30 AM,Employee reported a fire and smoke condition,OLD COALY WAY,2026-02-18 21:43:32,University_Park
+833,26UP00298,1,01/20/2026 08:27 PM,01/20/2026 08:27 PM,01/20/2026 08:37 PM,Employee reported a traffic complaint,STUCKEMAN FAMILY BLDG,2026-02-18 21:43:32,University_Park
+834,26UP00299,1,01/20/2026 08:15 PM,01/20/2026 08:15 PM,01/20/2026 09:03 PM,Assisted a student with a personal matter,BEAM HALL,2026-02-18 21:43:32,University_Park
+837,26UP00297,1,01/20/2026 05:11 PM,01/20/2026 04:45 PM,01/20/2026 05:56 PM,Assisted a student with a personal matter,BEAM HALL,2026-02-18 21:43:32,University_Park
+840,26UP00295,1,01/20/2026 03:55 PM,01/20/2026 03:55 PM,01/20/2026 05:04 PM,Employee reported suspicious activity,CURTIN HALL,2026-02-18 21:43:32,University_Park
+841,26UP00294,1,01/20/2026 03:40 PM,01/17/2026 02:00 AM,01/17/2026 10:00 AM,Employee reported damage to University property,SPROUL HALL,2026-02-18 21:43:32,University_Park
+852,26UP00293,1,01/20/2026 10:45 AM,01/20/2026 10:30 AM,01/20/2026 11:16 AM,Employee reported a two vehicle crash with no injuries,YELLOW T REDIFER LOT,2026-02-18 21:43:32,University_Park
+853,26UP00292,1,01/20/2026 10:01 AM,01/20/2026 09:50 AM,,Employee reported a two vehicle crash with no injuries,NITTANY PARKING,2026-02-18 21:43:32,University_Park
+855,26UP00290,1,01/20/2026 09:18 AM,01/19/2026 12:00 PM,01/20/2026 09:00 AM,Employee reported damage to University property,MARTIN HALL,2026-02-18 21:43:32,University_Park
+856,26UP00291,1,01/20/2026 09:14 AM,01/20/2026 09:14 AM,01/20/2026 09:44 AM,Student requested assistance with a personal matter,HUB ROBESON CULTURAL CENTER,2026-02-18 21:43:32,University_Park
+861,26UP00289,1,01/19/2026 09:46 PM,01/19/2026 12:30 AM,01/19/2026 09:46 PM,Student requested assistance with a civil  matter,RUNKLE HALL,2026-02-18 21:43:32,University_Park
+862,26UP00288,1,01/19/2026 08:26 PM,01/19/2026 08:11 PM,01/19/2026 08:30 PM,Employee reported damage to University property,PINCHOT HALL,2026-02-18 21:43:32,University_Park
+863,26UP00287,1,01/19/2026 08:17 PM,01/19/2026 04:00 AM,01/19/2026 04:30 AM,Student reported damage to University property,MARTIN HALL,2026-02-18 21:43:32,University_Park
+873,26UP00284,1,01/19/2026 03:15 AM,01/19/2026 03:15 AM,01/19/2026 03:32 AM,"Resident Assistant reported the odor of marijuana, origin not located",BRUMBAUGH HALL,2026-02-18 21:43:32,University_Park
+874,26UP00285,1,01/19/2026 03:11 AM,01/19/2026 02:30 AM,01/19/2026 04:04 AM,Student reported suspicious persons,PACKER HALL,2026-02-18 21:43:32,University_Park
+876,26UP00283,1,01/19/2026 02:28 AM,01/16/2026 02:00 AM,01/16/2026 02:15 AM,Student reported suspicious persons,NITTANY APT,2026-02-18 21:43:32,University_Park
+877,26UP00282,1,01/19/2026 02:16 AM,01/19/2026 02:16 AM,01/19/2026 02:33 AM,Underage student observed highly intoxicated and transported to the hospital,HIESTER HALL,2026-02-18 21:43:32,University_Park
+879,26UP00281,1,01/19/2026 12:11 AM,01/19/2026 12:11 AM,01/19/2026 12:39 AM,Student observed highly intoxicated and transported to the hospital,PORTER HALL,2026-02-18 21:43:32,University_Park
+883,26UP00280,1,01/18/2026 08:46 PM,01/18/2026 08:46 PM,01/18/2026 10:00 PM,Student reported a water leak,DEIKE BLDG,2026-02-18 21:43:32,University_Park
+887,26UP00276,1,01/18/2026 03:50 PM,01/18/2026 03:50 PM,01/18/2026 05:32 PM,Employee reported suspicious persons,REC HALL,2026-02-18 21:43:32,University_Park
+888,26UP00275,1,01/18/2026 03:41 PM,01/17/2026 03:22 PM,01/17/2026 04:42 PM,Visitor requested assistance with a personal matter,AIRPORT AIR TERMINAL BLDG,2026-02-18 21:43:32,University_Park
+896,26UP00273,1,01/18/2026 02:18 AM,01/18/2026 02:18 AM,01/18/2026 07:24 AM,Employee reported being physically assaulted by a known person,AIRPORT AIR TERMINAL BLDG,2026-02-18 21:43:32,University_Park
+898,26UP00271,1,01/18/2026 01:42 AM,01/16/2026 02:00 AM,,Student reported they were sexually assaulted by a known person in a residence hall,SOUTH HALLS RESIDENCE COMPLEX,2026-02-18 21:43:32,University_Park
+899,26UP00270,1,01/18/2026 01:27 AM,01/18/2026 01:27 AM,01/18/2026 02:10 AM,Student observed highly intoxicated and transported to the hospital,MCKEE HALL,2026-02-18 21:43:32,University_Park
+900,26UP00269,1,01/18/2026 01:13 AM,01/18/2026 01:13 AM,01/18/2026 01:27 AM,"Resident Assistant reported the odor of marijuana, origin not located",MCKEAN HALL,2026-02-18 21:43:32,University_Park
+901,26UP00268,1,01/18/2026 01:02 AM,01/18/2026 12:19 AM,01/18/2026 12:39 AM,Student observed highly intoxicated,SHORTLIDGE RD & E COLLEGE AVE,2026-02-18 21:43:32,University_Park
+906,26UP00266,1,01/17/2026 11:49 PM,01/17/2026 11:49 PM,01/18/2026 12:42 AM,Resident Assistant reported the odor of marijuana,SIMMONS HALL,2026-02-18 21:43:32,University_Park
+907,26UP00264,1,01/17/2026 11:28 PM,01/17/2026 11:28 PM,01/17/2026 11:45 PM,"Employee reported the odor of marijuana, origin not located",MIFFLIN HALL,2026-02-18 21:43:32,University_Park
+908,26UP00267,1,01/17/2026 11:23 PM,01/17/2026 11:23 PM,01/18/2026 12:03 AM,Visitor observed highly intoxicated and transported to the hospital,BIGLER RD & MILLENNIUM DR,2026-02-18 21:43:32,University_Park
+909,26UP00261,1,01/17/2026 10:59 PM,01/17/2026 10:59 PM,01/17/2026 11:13 PM,Assisted the fire department with a reported fire alarm activation,BEAVER STADIUM,2026-02-18 21:43:32,University_Park
+911,26UP00247,1,01/17/2026 05:59 PM,01/17/2026 05:59 PM,,Student stopped for a University policy violation regarding fireworks,FOOTBALL LOT,2026-02-18 21:43:32,University_Park
+919,26UP00242,1,01/17/2026 11:46 AM,01/17/2026 11:46 AM,01/17/2026 02:43 PM,Officer observed a employee trespassing inside a University building,AIRPORT AIR TERMINAL BLDG,2026-02-18 21:43:32,University_Park
+920,26UP00243,1,01/17/2026 11:33 AM,01/13/2026 07:00 PM,01/17/2025 11:15 AM,Student reported suspicious persons,HUB ROBESON CULTURAL CENTER,2026-02-18 21:43:32,University_Park
+922,26UP00241,1,01/17/2026 07:15 AM,01/17/2026 07:15 AM,01/17/2026 10:00 AM,Employee reported suspicious person,AIRPORT GENERAL AVIATION ADMINISTRATION BLDG,2026-02-18 21:43:32,University_Park
+926,26UP00240,1,01/17/2026 03:56 AM,01/17/2026 03:56 AM,01/17/2026 05:07 AM,Underage visitor observed highly intoxicated and transported to the hospital,ATHERTON HALL,2026-02-18 21:43:32,University_Park
+927,26UP00239,1,01/17/2026 03:54 AM,01/17/2026 03:54 AM,01/17/2026 05:17 AM,Student reported a concern for another student,PENNYPACKER HALL,2026-02-18 21:43:32,University_Park
+928,26UP00236,1,01/17/2026 02:24 AM,01/17/2026 02:24 AM,01/17/2026 02:34 AM,"Employee reported the odor of marijuana, origin not located",PORTER HALL,2026-02-18 21:43:32,University_Park
+929,26UP00234,1,01/17/2026 02:20 AM,01/17/2026 01:55 AM,,Student consumed alcoholic beverages being less than 21 years of age,BIGLER RD & MILLENNIUM DR,2026-02-18 21:43:32,University_Park
+930,26UP00235,1,01/17/2026 02:15 AM,01/17/2026 02:15 AM,01/17/2026 02:33 AM,Student reported damage to University property,PENNYPACKER HALL,2026-02-18 21:43:32,University_Park
+933,26UP00233,1,01/17/2026 01:50 AM,01/17/2026 01:48 AM,01/17/2026 01:50 AM,Student reported disorderly persons,MIFFLIN RD & MCKEAN RD,2026-02-18 21:43:32,University_Park
+936,26UP00221,1,01/16/2026 10:20 PM,01/16/2026 10:20 PM,01/16/2026 11:06 PM,Identified occupant in possession of marijuana,W COLLEGE AVE & N BARNARD ST,2026-02-18 21:43:32,University_Park
+937,26UP00218,1,01/16/2026 09:29 PM,01/16/2026 09:29 PM,01/16/2026 10:08 PM,Identified occupant in possession of marijuana and drug paraphernalia,MILLER HALL,2026-02-18 21:43:32,University_Park
+938,26UP00215,1,01/16/2026 08:08 PM,01/16/2026 08:08 PM,01/16/2026 08:18 PM,Employee reported a two vehicle crash with no injuries,LION SHRINE LOT,2026-02-18 21:43:32,University_Park
+939,26UP00216,1,01/16/2026 07:55 PM,01/16/2026 07:55 PM,01/16/2026 08:30 PM,Visitor reported a suspicious vehicle,VILLAGE DR,2026-02-18 21:43:32,University_Park
+940,26UP00213,1,01/16/2026 06:59 PM,01/16/2026 06:59 PM,01/16/2026 08:25 PM,Assisted a student with a personal matter,MILLER HALL,2026-02-18 21:43:32,University_Park
+941,26UP00212,1,01/16/2026 06:27 PM,01/16/2026 02:30 PM,01/16/2026 07:37 PM,Student reported suspicious activity,HOYT HALL,2026-02-18 21:43:32,University_Park
+942,26UP00209,1,01/16/2026 05:11 PM,01/16/2026 05:00 PM,01/16/2026 05:42 PM,Employee reported suspicious persons,CHAMBERS BLDG,2026-02-18 21:43:32,University_Park
+946,26UP00204,1,01/16/2026 03:25 PM,01/16/2026 03:25 PM,,Officer conducted a pre-employment background investigation,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+947,26UP00203,1,01/16/2026 03:07 PM,01/16/2026 03:07 PM,01/16/2026 03:52 PM,Student reported a hit and run vehicle crash,COMMUTER JORDAN EAST 1 LOT,2026-02-18 21:43:32,University_Park
+950,26UP00201,1,01/16/2026 01:49 PM,01/16/2026 01:49 PM,01/16/2026 02:10 PM,Assisted an outside law enforcement agency with an investigation,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+951,26UP00202,1,01/16/2026 01:45 PM,01/16/2026 06:20 AM,01/16/2026 07:10 AM,Student reported being harassed,WHITE BLDG,2026-02-18 21:43:32,University_Park
+954,26UP00200,1,01/16/2026 12:43 PM,01/13/2026 03:09 PM,,Employee reported a one vehicle crash with no injuries,NITTANY PARKING,2026-02-18 21:43:32,University_Park
+956,26UP00305,1,01/16/2026 12:23 PM,01/16/2026 12:23 PM,01/16/2026 12:54 PM,Assisted the ambulance with a medical emergency,SHUNK HALL,2026-02-18 21:43:32,University_Park
+957,26UP00199,1,01/16/2026 12:22 PM,01/15/2026 01:35 AM,01/15/2026 01:40 AM,Student reported a person trespassing inside a residence hall room,POLLOCK HALLS RESIDENCE COMPLEX,2026-02-18 21:43:32,University_Park
+966,26UP00198,1,01/16/2026 05:53 AM,01/16/2026 05:53 AM,01/16/2026 06:15 AM,Assisted the fire department with a reported fire alarm activation,BEAVER STADIUM,2026-02-18 21:43:32,University_Park
+967,26UP00197,1,01/16/2026 04:35 AM,01/16/2026 03:35 AM,01/16/2026 05:14 AM,Underage student observed highly intoxicated and transported to the hospital,BEAM HALL,2026-02-18 21:43:32,University_Park
+968,26UP00195,1,01/16/2026 02:26 AM,01/16/2026 02:26 AM,01/16/2026 02:30 AM,Conducted a pre-employment background investigation,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+969,26UP00196,1,01/16/2026 02:08 AM,01/16/2026 12:00 AM,01/16/2026 03:19 AM,Student consumed alcoholic beverages being less than 21 years of age,HIBBS HALL,2026-02-18 21:43:32,University_Park
+971,26UP00193,1,01/16/2026 12:01 AM,01/16/2026 12:01 AM,01/16/2025 12:35 AM,Assisted the fire department with a reported fire alarm activation,SHULZE HALL,2026-02-18 21:43:32,University_Park
+972,26UP00188,1,01/15/2026 10:57 PM,01/12/2026 05:35 PM,01/12/2025 05:35 PM,Employee reported being harassed,UNKNOWN LOCATION,2026-02-18 21:43:32,University_Park
+977,26UP00173,1,01/15/2026 06:54 PM,01/15/2026 03:00 PM,01/15/2026 06:30 PM,Student reported being harassed,UNKNOWN LOCATION,2026-02-18 21:43:32,University_Park
+978,26UP00174,1,01/15/2026 06:16 PM,07/15/2025 06:16 PM,01/15/2026 07:45 PM,Student reported being harassed,SPROUL HALL,2026-02-18 21:43:32,University_Park
+981,26UP00168,1,01/15/2026 04:45 PM,10/31/2025 11:00 PM,11/01/2025 12:00 AM,Student reported they were sexually assaulted by a known person in a residence hall,SOUTH HALLS RESIDENCE COMPLEX,2026-02-18 21:43:32,University_Park
+982,26UP00164,1,01/15/2026 04:27 PM,12/28/2025 04:27 PM,12/28/2025 06:00 PM,Student reported suspicious persons,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+983,26UP00166,1,01/15/2026 04:27 PM,01/15/2026 04:27 PM,01/15/2026 04:37 PM,Student found in possession of alcoholic beverages being less than 21 years of age,SNYDER HALL,2026-02-18 21:43:32,University_Park
+993,26UP00160,1,01/15/2026 01:20 PM,01/12/2026 08:00 PM,01/13/2026 09:00 PM,Student reported the loss or theft of their unattended personal property,EARLE HALL,2026-02-18 21:43:32,University_Park
+997,26UP00159,1,01/15/2026 12:17 PM,01/15/2026 11:17 AM,01/15/2026 12:17 PM,Employee reported a two vehicle crash with no injuries,ORANGE F MORGAN CENTER LOT,2026-02-18 21:43:32,University_Park
+1000,26UP00158,1,01/15/2026 10:59 AM,01/15/2026 10:59 AM,01/15/2026 11:30 AM,Employee reported a one vehicle crash with no injuries,WEST DECK,2026-02-18 21:43:32,University_Park
+1004,26UP00157,1,01/15/2026 10:26 AM,01/13/2026 07:13 PM,01/15/2026 10:16 AM,Employee reported theft of services,HUB PARKING DECK,2026-02-18 21:43:32,University_Park
+1006,26UP00155,1,01/15/2026 09:19 AM,12/15/2025 09:19 AM,01/07/2026 07:00 AM,Employee reported suspicious persons,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+1012,26UP00154,1,01/15/2026 02:39 AM,01/15/2026 02:39 AM,01/15/2026 03:16 AM,Student observed highly intoxicated,MCKEAN RD & SHORTLIDGE RD,2026-02-18 21:43:32,University_Park
+1014,26UP00152,1,01/15/2026 12:18 AM,01/15/2026 12:18 AM,01/15/2026 12:45 AM,Underage student observed highly intoxicated,BIGLER RD & MCKEAN RD,2026-02-18 21:43:32,University_Park
+1017,26UP00151,1,01/14/2026 09:25 PM,12/20/2025 09:25 PM,01/14/2026 09:25 PM,Student reported the theft of their unattended personal property,LOT 81 BEAVER HALL LOT,2026-02-18 21:43:32,University_Park
+1020,26UP00150,1,01/14/2026 08:50 PM,01/14/2026 08:50 PM,01/14/2026 09:32 PM,Student requested assistance with a personal matter,STUART HALL,2026-02-18 21:43:32,University_Park
+1022,26UP00149,1,01/14/2026 08:12 PM,01/14/2026 08:12 PM,01/14/2026 08:20 PM,Employee reported a suspicious odor,PATERNO LIBRARY,2026-02-18 21:43:32,University_Park
+1025,26UP00148,1,01/14/2026 06:28 PM,01/14/2026 06:28 PM,01/14/2026 06:38 PM,Employee reported a vehicle crash no injuries,WAGNER BLDG,2026-02-18 21:43:32,University_Park
+1028,26UP00147,1,01/14/2026 05:57 PM,01/14/2026 05:57 PM,01/14/2026 06:14 PM,Employee reported a concern for another person,REC HALL,2026-02-18 21:43:32,University_Park
+1029,26UP00146,1,01/14/2026 05:31 PM,10/10/2025 12:00 AM,10/11/2025 11:59 PM,Student reported they were indecently assaulted by a known person in a residence hall,EAST HALLS RESIDENCE COMPLEX,2026-02-18 21:43:32,University_Park
+1030,26UP00144,1,01/14/2026 05:23 PM,01/14/2026 04:16 PM,,Employee reported suspicious activity,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+1031,26UP00145,1,01/14/2026 05:22 PM,01/14/2026 05:22 PM,01/14/2026 06:30 PM,Student reported unsafe conditions,CHEMICAL AND BIOMEDICAL ENGINEERING BLDG,2026-02-18 21:43:32,University_Park
+1035,26UP00143,1,01/14/2026 04:29 PM,01/14/2026 04:29 PM,01/14/2026 06:57 PM,Employee reported suspicious persons,NOLL LAB,2026-02-18 21:43:32,University_Park
+1039,26UP00141,1,01/14/2026 03:05 PM,09/01/2025 12:00 AM,09/30/2025 12:00 AM,Student reported they were sexually assaulted by a known person in a residence hall,ON CAMPUS RESIDENCE HALL,2026-02-18 21:43:32,University_Park
+1040,26UP00140,1,01/14/2026 01:28 PM,11/07/2025 04:30 PM,11/07/2025 05:00 PM,Employee reported a concern for another student,N ATHERTON ST,2026-02-18 21:43:32,University_Park
+1043,26UP00139,1,01/14/2026 12:22 PM,01/14/2026 12:22 PM,01/14/2026 12:57 PM,Employee reported a traffic concern regarding vehicles,NITTANY PARKING,2026-02-18 21:43:32,University_Park
+1045,26UP00138,1,01/14/2026 11:58 AM,01/14/2026 11:58 AM,01/14/2026 12:27 PM,Assisted a student with a personal matter,YOUNG HALL,2026-02-18 21:43:32,University_Park
+1050,26UP00137,1,01/14/2026 02:58 AM,01/14/2026 02:58 AM,01/14/2026 03:30 AM,Underage student observed highly intoxicated and transported to the hospital,PACKER HALL,2026-02-18 21:43:32,University_Park
+1051,26UP00136,1,01/14/2026 02:31 AM,01/14/2026 02:31 AM,01/14/2026 02:50 AM,Underage student observed highly intoxicated,ROBINSON HALL,2026-02-18 21:43:32,University_Park
+1052,26UP00135,1,01/14/2026 02:23 AM,01/14/2026 02:23 AM,01/14/2026 02:45 AM,Underage student observed highly intoxicated,HOLMES HALL,2026-02-18 21:43:32,University_Park
+1053,26UP00134,1,01/14/2026 12:53 AM,01/14/2026 12:53 AM,01/14/2026 04:28 AM,Identified students in possession of marijuana,MCKEAN HALL,2026-02-18 21:43:32,University_Park
+1054,26UP00132,1,01/13/2026 10:29 PM,01/13/2026 10:29 PM,01/13/2026 10:45 PM,Assisted Residence Life staff with a University policy violation,NITTANY APT,2026-02-18 21:43:32,University_Park
+1057,26UP00129,1,01/13/2026 09:18 PM,01/13/2026 09:18 PM,01/13/2026 09:45 PM,"Resident Assistant reported the odor of marijuana, origin not located",HAMILTON HALL,2026-02-18 21:43:32,University_Park
+1061,26UP00128,1,01/13/2026 04:09 PM,11/08/2025 10:30 AM,11/08/2025 03:30 PM,Student reported the loss or theft of their secured personal property,BEAVER STADIUM,2026-02-18 21:43:32,University_Park
+1075,26UP00125,1,01/13/2026 04:29 AM,01/13/2026 04:25 AM,01/13/2026 06:31 AM,Employee reported suspicious persons,REDIFER HALL,2026-02-18 21:43:32,University_Park
+1077,26UP00124,1,01/13/2026 12:59 AM,01/12/2026 05:08 PM,01/13/2026 01:01 AM,Assisted an outside law enforcement agency with an investigation,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+1080,26UP00123,1,01/12/2026 10:23 PM,01/12/2026 10:23 PM,01/12/2026 11:59 PM,Student reported a University policy violation,PATTERSON HALL,2026-02-18 21:43:32,University_Park
+1081,26UP00122,1,01/12/2026 09:20 PM,01/12/2026 07:00 AM,01/12/2026 08:00 PM,Student reported the theft of University property,SIMMONS HALL,2026-02-18 21:43:32,University_Park
+1082,26UP00121,1,01/12/2026 08:55 PM,01/12/2026 08:55 PM,01/12/2026 08:59 PM,Employee reported suspicious persons,HAMMOND BLDG,2026-02-18 21:43:32,University_Park
+1086,26UP00120,1,01/12/2026 04:57 PM,01/12/2026 04:57 PM,01/12/2026 05:43 PM,Student reported being harassed,MCALLISTER BLDG,2026-02-18 21:43:32,University_Park
+1087,26UP00119,1,01/12/2026 04:11 PM,01/12/2026 04:11 PM,01/12/2026 04:50 PM,Visitor reported a traffic concern regarding a vehicle,HUB PARKING DECK,2026-02-18 21:43:32,University_Park
+1088,26UP00118,1,01/12/2026 03:55 PM,01/12/2026 03:55 PM,01/12/2026 04:18 PM,Employee reported suspicious activity,HUB ROBESON CULTURAL CENTER,2026-02-18 21:43:32,University_Park
+1091,26UP00117,1,01/12/2026 03:27 PM,12/17/2025 05:00 PM,01/12/2026 04:01 PM,Student reported the theft of their secured personal property,NITTANY COMMUNITY CENTER,2026-02-18 21:43:32,University_Park
+1093,26UP00115,1,01/12/2026 02:10 PM,01/10/2026 12:00 AM,01/12/2026 02:00 PM,Employee reported damage to University property,STEPHENS HALL,2026-02-18 21:43:32,University_Park
+1100,26UP00114,1,01/12/2026 09:25 AM,01/12/2026 09:25 AM,01/12/2026 10:53 AM,Student reported accidental damage to personal property,BRILL HALL,2026-02-18 21:43:32,University_Park
+1109,26UP00110,1,01/11/2026 09:49 PM,01/11/2026 09:49 PM,01/11/2026 10:20 PM,Student reported the loss or theft of personal property from a secured residencehall room,THOMPSON HALL,2026-02-18 21:43:32,University_Park
+1110,26UP00109,1,01/11/2026 09:02 PM,01/11/2026 09:02 PM,01/11/2026 10:32 PM,Resident Assistant reported finding abandoned drugs/drug paraphernalia,SIMMONS HALL,2026-02-18 21:43:32,University_Park
+1111,26UP00108,1,01/11/2026 08:24 PM,01/11/2026 08:24 PM,01/11/2026 08:41 PM,Employee reported a suspicious odor,HAMILTON HALL,2026-02-18 21:43:32,University_Park
+1119,26UP00106,1,01/11/2026 03:44 PM,01/11/2026 03:44 PM,,Student reported a two vehicle crash with no injuries,EARLE HALL,2026-02-18 21:43:32,University_Park
+1128,26UP00105,1,01/11/2026 08:46 AM,01/11/2026 08:46 AM,,Employee reported suspicious activity,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+1133,26UP00104,1,01/10/2026 06:21 PM,01/10/2026 06:21 PM,,Visitor reported a two vehicle crash with injuries,NITTANY PARKING,2026-02-18 21:43:32,University_Park
+1135,26UP00103,1,01/10/2026 03:29 PM,12/16/2025 12:00 AM,01/10/2026 05:53 PM,Student reported the theft of personal property from a secured residence hallroom,SIMMONS HALL,2026-02-18 21:43:32,University_Park
+1136,26UP00102,1,01/10/2026 02:50 PM,01/10/2026 02:30 PM,01/10/2026 02:35 PM,Employee reported a hit and run vehicle crash,NITTANY PARKING,2026-02-18 21:43:32,University_Park
+1138,26UP00100,1,01/10/2026 12:20 PM,01/10/2026 12:20 PM,01/10/2026 12:21 PM,Employee reported suspicious activity,HENDERSON DR,2026-02-18 21:43:32,University_Park
+1140,26UP00101,1,01/10/2026 12:02 PM,12/19/2025 12:00 PM,01/10/2026 11:50 AM,Student requested assistance with a personal matter,MCELWAIN HALL,2026-02-18 21:43:32,University_Park
+1141,26UP00099,1,01/10/2026 11:58 AM,01/10/2026 11:58 AM,01/10/2026 12:30 PM,Assisted an outside law enforcement agency with an investigation,E COLLEGE AVE,2026-02-18 21:43:32,University_Park
+1142,26UP00098,1,01/10/2026 11:22 AM,01/09/2026 07:17 PM,01/10/2026 11:22 AM,Employee reported suspicious activity,BIGLER RD,2026-02-18 21:43:32,University_Park
+1149,26UP00096,1,01/10/2026 12:06 AM,01/10/2026 12:00 AM,01/10/2026 12:23 AM,Officer observed visitors trespassing inside a University building/restricted area,BEAVER STADIUM,2026-02-18 21:43:32,University_Park
+1151,26UP00093,1,01/09/2026 10:51 PM,01/09/2026 10:51 PM,01/10/2026 12:51 AM,A vehicle stop investigation revealed the operator to be driving under the influence of alcohol,PORTER RD & CURTIN RD,2026-02-18 21:43:32,University_Park
+1156,26UP00082,1,01/08/2026 11:35 PM,01/08/2026 11:35 PM,01/09/2026 12:56 AM,A vehicle stop investigation revealed the operator to be driving under the influence of alcohol,N ATHERTON ST (CLAY LN - RAILROAD AVE),2026-02-18 21:43:32,University_Park
+1159,26UP00078,1,01/08/2026 06:55 PM,01/08/2026 06:55 PM,01/08/2026 07:41 PM,Received this department's copy of a Protection From Abuse (PFA) order,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+1174,26UP00068,1,01/07/2026 10:23 PM,12/22/2025 12:00 AM,01/04/2026 12:00 AM,Employee reported the loss or theft of their unattended personal property,FLEET OPERATIONS FACILITY,2026-02-18 21:43:32,University_Park
+1179,26UP00065,1,01/07/2026 04:21 PM,01/07/2026 04:21 PM,01/07/2026 07:06 PM,Employee requested assistance with an administrative matter,SHIELDS BLDG,2026-02-18 21:43:32,University_Park
+1180,26UP00060,1,01/07/2026 03:33 PM,01/01/2025 12:00 AM,05/31/2025 11:59 PM,Assisted an outside agency with a reported hazing at an off campus fraternity,OFF CAMPUS FRATERNITY,2026-02-18 21:43:32,University_Park
+1184,26UP00059,1,01/07/2026 02:44 PM,01/07/2026 09:44 AM,01/07/2026 02:20 PM,Assisted an outside law enforcement agency with an investigation,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+1200,26UP00056,1,01/06/2026 03:27 PM,09/01/2025 12:00 AM,12/21/2025 12:00 AM,Assisted an outside law enforcement agency with an investigation,OFF CAMPUS FRATERNITY,2026-02-18 21:43:32,University_Park
+1202,26UP00055,1,01/06/2026 11:46 AM,10/31/2025 12:00 AM,11/02/2025 12:00 AM,Assisted an outside law enforcement agency with an investigation,UNIVERSITY SUPPORT BLDG I,2026-02-18 21:43:32,University_Park
+1206,26UP00054,1,01/06/2026 08:04 AM,12/25/2025 01:00 AM,12/25/2025 01:15 AM,Assisted an outside law enforcement agency with an investigation,W COLLEGE AVE & N BURROWES RD,2026-02-18 21:43:32,University_Park
+1208,26UP00053,1,01/05/2026 11:22 PM,01/05/2026 11:21 PM,01/05/2026 11:25 PM,,CURTIN RD & PORTER RD,2026-02-18 21:43:32,University_Park
+1213,26UP00050,1,01/05/2026 05:52 PM,01/05/2026 05:52 PM,01/05/2026 06:12 PM,Visitor reported a concern for a student,SIMMONS HALL,2026-02-18 21:43:32,University_Park
+1214,26UP00051,1,01/05/2026 05:52 PM,01/05/2026 05:52 PM,01/05/2026 06:31 PM,Student reported a concern for another student,IKENBERRY HALL,2026-02-18 21:43:32,University_Park
+1215,26UP00052,1,01/05/2026 05:43 PM,12/22/2025 08:00 AM,01/05/2026 05:43 PM,Student reported a hit and run vehicle crash,HOLUBA HALL,2026-02-18 21:43:32,University_Park
+1217,26UP00046,1,01/05/2026 02:04 PM,01/05/2026 08:34 AM,01/05/2026 02:03 PM,Employee reported suspicious person,OLD MAIN,2026-02-18 21:43:32,University_Park
+1220,26UP00045,1,01/05/2026 11:12 AM,01/05/2026 11:12 AM,01/05/2026 11:15 AM,Employee reported the theft of University property,SPROUL HALL,2026-02-18 21:43:32,University_Park
+1257,26UP00010,1,01/02/2026 11:48 AM,01/02/2026 11:40 AM,01/02/2026 11:48 AM,Employee reported suspicious person,COLONNADE WAY,2026-02-18 21:43:32,University_Park
+1263,26UP00007,1,01/01/2026 01:39 PM,01/01/2026 12:59 PM,01/01/2026 01:07 PM,Employee reported suspicious persons,BEAVER STADIUM,2026-02-18 21:43:32,University_Park
+1624,26UP00930,1,02/26/2026 04:25 AM,02/26/2026 04:15 AM,02/26/2026 04:25 AM,Student observed highly intoxicated and transported to the hospital,EARLE HALL,2026-02-26 23:59:30,University_Park
+1625,26UP00929,1,02/26/2026 04:07 AM,02/26/2026 04:07 AM,02/26/2026 04:25 AM,Student consumed alcoholic beverages being less than 21 years of age,MCKEAN HALL,2026-02-26 23:59:30,University_Park
+1626,26UP00928,1,02/26/2026 02:40 AM,02/26/2026 02:40 AM,02/26/2026 04:00 AM,Student observed highly intoxicated and transported to the hospital,PANOFSKY HALL,2026-02-26 23:59:30,University_Park
+1627,26UP00925,1,02/26/2026 01:21 AM,02/26/2026 12:45 AM,02/26/2026 01:40 AM,Underage student observed highly intoxicated and transported to the hospital,BRUMBAUGH HALL,2026-02-26 23:59:30,University_Park
+1628,26UP00926,1,02/26/2026 01:06 AM,02/26/2026 01:06 AM,02/26/2026 01:56 AM,Student observed highly intoxicated and transported to the hospital,STONE HALL,2026-02-26 23:59:30,University_Park
+1629,26UP00923,1,02/26/2026 12:37 AM,02/26/2026 12:37 AM,02/26/2026 01:04 AM,Underage student observed highly intoxicated and transported to the hospital,COOPER HALL,2026-02-26 23:59:30,University_Park
+1630,26UP00922,1,02/26/2026 12:29 AM,02/20/2026 12:01 AM,02/26/2026 12:10 AM,Student reported disorderly persons,FARRELL HALL,2026-02-26 23:59:30,University_Park
+1632,26UP00916,1,02/25/2026 09:20 PM,02/25/2026 07:11 PM,02/25/2026 09:20 PM,Student reported a hit and run vehicle crash,HUB PARKING DECK,2026-02-26 23:59:30,University_Park
+1633,26UP00915,1,02/25/2026 09:05 PM,02/25/2026 09:05 PM,02/25/2026 09:32 PM,Student reported abandoned property,BRYCE JORDAN CENTER,2026-02-26 23:59:30,University_Park
+1634,26UP00914,1,02/25/2026 08:18 PM,02/25/2026 08:18 PM,02/25/2026 08:41 PM,Employee reported fraudulent activity,HUCK LIFE SCIENCES BLDG,2026-02-26 23:59:30,University_Park
+1636,26UP00913,1,02/25/2026 06:08 PM,02/25/2026 06:08 PM,02/25/2026 07:02 PM,Assisted the fire department with a reported fire alarm activation,INNOVATION BLVD,2026-02-26 23:59:30,University_Park
+1639,26UP00912,1,02/25/2026 05:23 PM,02/24/2026 03:00 PM,02/25/2026 05:00 PM,Student reported the theft of their unattended personal property,WILLARD BLDG,2026-02-26 23:59:30,University_Park
+1641,26UP00911,1,02/25/2026 04:44 PM,02/02/2026 10:00 PM,02/03/2026 09:00 AM,Student reported damage to their privately owned vehicle,MCELWAIN HALL,2026-02-26 23:59:30,University_Park
+1642,26UP00910,1,02/25/2026 04:40 PM,02/24/2026 12:00 AM,02/25/2026 04:40 PM,Assisted an outside law enforcement agency with an investigation,OFF CAMPUS FRATERNITY,2026-02-26 23:59:30,University_Park
+1643,26UP00909,1,02/25/2026 03:15 PM,07/31/2025 12:17 PM,02/25/2026 03:15 PM,Student reported suspicious activity,UNIVERSITY SUPPORT BLDG I,2026-02-26 23:59:30,University_Park
+1645,26UP00908,1,02/25/2026 01:40 PM,02/17/2026 06:20 PM,02/17/2026 06:44 PM,Employee reported the theft of University property,REDIFER HALL,2026-02-26 23:59:30,University_Park
+1650,26UP00907,1,02/25/2026 10:07 AM,02/18/2026 11:07 AM,02/18/2026 11:25 AM,Employee reported the theft of University property,REDIFER HALL,2026-02-26 23:59:30,University_Park
+1651,26UP00906,1,02/25/2026 10:04 AM,02/21/2026 11:00 PM,02/22/2026 03:30 AM,Student reported the theft of their unsecured personal property,BRYCE JORDAN CENTER,2026-02-26 23:59:30,University_Park
+1652,26UP00905,1,02/25/2026 09:29 AM,02/25/2026 09:29 AM,02/25/2026 09:46 AM,Assisted an outside agency with a reported Hazing at an off campus fraternity,OFF CAMPUS FRATERNITY,2026-02-26 23:59:30,University_Park
+1653,26UP00904,1,02/25/2026 08:11 AM,02/20/2026 10:26 AM,02/20/2026 10:33 AM,Employee reported the theft of University property,REDIFER HALL,2026-02-26 23:59:30,University_Park
+1654,26UP00903,1,02/25/2026 07:12 AM,02/20/2026 02:37 PM,02/20/2026 02:40 PM,Employee reported the theft of University property,REDIFER HALL,2026-02-26 23:59:30,University_Park
+1656,26UP00902,1,02/25/2026 12:22 AM,02/25/2026 12:10 AM,02/25/2026 12:33 AM,"Resident Assistant reported the odor of marijuana, origin not located",HARTRANFT HALL,2026-02-26 23:59:30,University_Park
+1657,26UP00899,1,02/24/2026 10:36 PM,02/24/2026 10:36 PM,02/24/2026 11:13 PM,Employee reported suspicious activity,AIRPORT AIR TERMINAL BLDG,2026-02-26 23:59:30,University_Park
+1658,26UP00898,1,02/24/2026 09:37 PM,02/24/2026 09:37 PM,02/24/2026 10:15 PM,Officer observed students engaged in disorderly behavior,MCKEAN HALL,2026-02-26 23:59:30,University_Park
+1661,26UP00897,1,02/24/2026 09:07 PM,02/24/2026 09:07 PM,02/24/2026 09:40 PM,Employee reported disorderly persons,OLD MAIN,2026-02-26 23:59:30,University_Park
+1664,26UP00896,1,02/24/2026 08:08 PM,02/24/2026 05:07 PM,02/24/2026 08:08 PM,Student reported the theft of their unsecured personal property,INTRAMURAL BLDG,2026-02-26 23:59:30,University_Park
+1665,26UP00895,1,02/24/2026 07:23 PM,02/24/2026 07:23 PM,02/24/2026 07:40 PM,Student reported a smoke condition,NITTANY APT,2026-02-26 23:59:30,University_Park
+1667,26UP00894,1,02/24/2026 05:34 PM,02/24/2026 04:20 PM,02/24/2026 05:00 PM,Student reported the theft of their unsecured personal property,PATTEE LIBRARY,2026-02-26 23:59:30,University_Park
+1672,26UP00893,1,02/24/2026 04:47 PM,02/24/2026 04:47 PM,02/24/2026 05:45 PM,Assisted a student with a personal matter,STUDENT HEALTH CENTER,2026-02-26 23:59:30,University_Park
+1675,26UP00892,1,02/24/2026 03:52 PM,02/24/2026 03:52 PM,02/24/2026 04:25 PM,Visitor reported a two vehicle crash with no injuries,ORANGE L EAST (FOUNDERS LOT),2026-02-26 23:59:30,University_Park
+1678,26UP00891,1,02/24/2026 03:13 PM,02/24/2026 03:13 PM,02/24/2026 03:40 PM,Student reported a two vehicle crash with no injuries,WEST DECK,2026-02-26 23:59:30,University_Park
+1680,26UP00890,1,02/24/2026 03:07 PM,02/15/2026 05:11 PM,,Employee reported being harassed,UNKNOWN LOCATION,2026-02-26 23:59:30,University_Park
+1684,26UP00889,1,02/24/2026 02:08 PM,02/20/2026 05:40 PM,02/20/2026 05:50 PM,Employee reported the theft of University property,REDIFER HALL,2026-02-26 23:59:30,University_Park
+1693,26UP00888,1,02/24/2026 09:43 AM,02/24/2026 08:36 AM,02/24/2026 09:43 AM,Employee reported a hit and run vehicle crash,EAST PARKING DECK,2026-02-26 23:59:30,University_Park
+1694,26UP00887,1,02/24/2026 08:32 AM,02/24/2026 08:00 AM,02/24/2026 08:37 AM,Employee requested assistance with an administrative matter,PATERNO LIBRARY,2026-02-26 23:59:30,University_Park
