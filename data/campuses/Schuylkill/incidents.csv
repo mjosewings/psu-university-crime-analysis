@@ -1,0 +1,21 @@
+id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,campus
+241,26SL00015,19,02/08/2026 11:28 PM,02/08/2026 11:28 PM,02/08/2026 11:49 PM,Student requested assistance with a civil matter,NITTANY APARTMENTS III,2026-02-18 21:43:32,Schuylkill
+316,26SL00014,19,02/06/2026 03:11 PM,02/06/2026 03:11 PM,02/06/2026 03:33 PM,Assisted an outside law enforcement agency with an investigation,E MAIN ST,2026-02-18 21:43:32,Schuylkill
+418,26SL00013,19,02/03/2026 04:11 PM,02/03/2026 04:07 PM,02/03/2026 05:30 PM,Assisted an outside law enforcement agency with an investigation,PA-61,2026-02-18 21:43:32,Schuylkill
+435,26SL00012,19,02/03/2026 10:53 AM,02/03/2026 10:53 AM,02/03/2026 11:20 AM,Assisted an outside law enforcement agency with an investigation,W MAIN ST,2026-02-18 21:43:32,Schuylkill
+459,26SL00011,19,02/02/2026 12:30 PM,02/02/2026 12:30 PM,02/02/2026 12:40 PM,Employee reported a parking concern,CLASSROOM BUILDING PARKING LOT - SCHUYLKILL,2026-02-18 21:43:32,Schuylkill
+469,26SL00010,19,02/02/2026 08:40 AM,02/02/2026 08:40 AM,02/02/2026 08:46 AM,Assisted the ambulance with a medical emergency,NITTANY APARTMENTS V,2026-02-18 21:43:32,Schuylkill
+614,26SL00009,19,01/28/2026 12:50 PM,01/27/2026 10:59 AM,01/27/2026 11:01 AM,Employee reported a hit and run vehicle crash,UNIVERSITY DR,2026-02-18 21:43:32,Schuylkill
+652,26SL00008,19,01/27/2026 10:51 AM,01/27/2026 10:45 AM,01/27/2026 11:19 AM,Assisted an outside law enforcement agency with an investigation,PA-61 & UNIVERSITY DR,2026-02-18 21:43:32,Schuylkill
+702,26SL00007,19,01/25/2026 06:11 AM,01/25/2026 06:08 AM,,Employee reported a two vehicle crash with no injuries,STUDENT PARKING LOT - SCHUYLKILL,2026-02-18 21:43:32,Schuylkill
+708,26SL00006,19,01/24/2026 06:24 PM,01/24/2026 06:14 PM,,Assisted an outside law enforcement agency with an investigation,PA-61,2026-02-18 21:43:32,Schuylkill
+745,26SL00005,19,01/23/2026 11:03 PM,01/23/2026 10:58 PM,01/23/2026 11:03 PM,"Resident Assistant reported the odor of marijuana, origin not located",NITTANY APARTMENTS V,2026-02-18 21:43:32,Schuylkill
+959,26SL00003,19,01/16/2026 12:00 PM,01/14/2026 11:58 AM,,Assisted a student with a personal matter,HEALTH & WELLNESS BUILDING,2026-02-18 21:43:32,Schuylkill
+1026,26SL00002,19,01/14/2026 06:15 PM,01/14/2026 03:18 PM,01/14/2026 06:15 PM,Student reported the loss or theft of their unattended personal property,STUDENT-COMMUNITY ACTIVITY CENTER,2026-02-18 21:43:32,Schuylkill
+1115,26SL00001,19,01/11/2026 05:00 PM,12/18/2025 12:00 AM,01/10/2026 09:36 AM,Student requested assistance with a personal matter,ADMINISTRATION BUILDING,2026-02-18 21:43:32,Schuylkill
+1471,26SL00016,19,02/17/2026 09:13 PM,02/17/2026 09:13 PM,02/17/2026 09:30 PM,Assisted an outside law enforcement agency with an investigation,ST JOHN ST,2026-02-21 20:58:08,Schuylkill
+1499,26SL00017,19,02/14/2026 02:06 AM,02/14/2026 02:06 AM,02/14/2026 02:38 AM,Assisted a student with a personal matter,STUDENT PARKING LOT - SCHUYLKILL,2026-02-21 20:58:08,Schuylkill
+1544,26SL00020,19,02/22/2026 01:48 PM,02/22/2026 01:48 PM,02/22/2026 02:00 PM,Employee reported a University policy violation,HEALTH & WELLNESS BUILDING,2026-02-25 02:54:48,Schuylkill
+1550,26SL00019,19,02/22/2026 03:40 AM,02/22/2026 03:30 AM,02/22/2026 03:40 AM,Assisted an outside law enforcement agency with an investigation,DOCK ST,2026-02-25 02:54:48,Schuylkill
+1565,26SL00018,19,02/21/2026 05:30 PM,02/21/2026 01:42 PM,02/21/2026 01:43 PM,Employee reported accidental damage to University property,UNIVERISITY DR,2026-02-25 02:54:48,Schuylkill
+1644,26SL00021,19,02/25/2026 02:40 PM,08/01/2025 12:00 AM,02/25/2026 07:00 PM,Student requested assistance with a personal matter,NITTANY APARTMENTS I,2026-02-26 23:59:30,Schuylkill
