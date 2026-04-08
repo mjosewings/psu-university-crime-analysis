@@ -1,4 +1,4 @@
-id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,campus
+id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,final_campus
 19,26ERtemp0006,5,02/16/2026 09:43 PM,02/16/2026 09:43 PM,02/16/2026 10:15 PM,Student reported suspicious activity,REED UNION BUILDING,2026-02-18 21:43:32,Erie
 24,26ERtemp0005,5,02/16/2026 03:20 PM,02/16/2026 03:15 PM,02/16/2026 03:45 PM,Employee reported a concern for a visitor,REED LOT,2026-02-18 21:43:32,Erie
 36,26ERtemp0004,5,02/15/2026 08:15 PM,02/15/2026 08:13 PM,02/15/2026 09:12 PM,Employee reported a power outage and alarm activation,NIAGARA HALL,2026-02-18 21:43:32,Erie

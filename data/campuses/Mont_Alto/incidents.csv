@@ -1,0 +1,6 @@
+id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,final_campus
+79,26MAtemp0002,17,02/14/2026 06:01 AM,02/14/2026 05:26 AM,02/14/2026 05:29 AM,Student reported theft of their unattended personal property,MONT ALTO HALL,2026-02-18 21:43:32,Mont_Alto
+160,26MAtemp0001,17,02/11/2026 12:05 PM,02/09/2026 07:40 PM,02/10/2026 12:30 AM,Assisted an employee with an administrative matter,MULTI-PURPOSE BUILDING,2026-02-18 21:43:32,Mont_Alto
+1253,26MA00001,17,01/02/2026 03:58 PM,01/02/2026 03:58 PM,01/02/2026 04:01 PM,Employee reported theft of services,MONT ALTO HALL LOT 1 - MONT ALTO,2026-02-18 21:43:32,Mont_Alto
+1498,26MA00003,17,02/14/2026 06:01 AM,02/14/2026 05:26 AM,02/14/2026 05:29 AM,Student reported the theft of their unattended personal property,MONT ALTO HALL,2026-02-21 20:58:08,Mont_Alto
+1510,26MA00002,17,02/11/2026 12:05 PM,02/09/2026 07:40 PM,02/10/2026 12:35 AM,Employee requested assistance with an administrative matter,MULTI-PURPOSE ACTIVITIES CENTER,2026-02-21 20:58:08,Mont_Alto

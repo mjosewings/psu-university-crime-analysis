@@ -1,0 +1,3 @@
+id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,final_campus
+1005,26WB00002,21,01/15/2026 10:12 AM,01/14/2026 02:00 PM,01/15/2026 10:12 AM,Employee requested assistance with an administrative matter,ATHLETIC AND RECREATION BUILDING,2026-02-18 21:43:32,Wilkes_Barre
+1264,26WB00001,21,01/01/2026 10:37 AM,01/01/2026 10:37 AM,,Assisted an outside law enforcement agency with an investigation,UNKNOWN  LOCATION,2026-02-18 21:43:32,Wilkes_Barre

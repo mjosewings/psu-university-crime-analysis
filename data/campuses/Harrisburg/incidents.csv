@@ -1,9 +1,8 @@
-id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,campus
+id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,final_campus
 180,26HB00068,13,02/10/2026 09:30 PM,02/10/2026 09:30 PM,02/10/2026 09:40 PM,Student requested assistance with a personal matter,OLMSTED BUILDING,2026-02-18 21:43:32,Harrisburg
 213,26HB00067,13,02/09/2026 04:28 PM,02/09/2026 04:28 PM,02/09/2026 05:00 PM,Assisted the ambulance with a medical emergency,FALCON HALL,2026-02-18 21:43:32,Harrisburg
 226,26HB00065,13,02/09/2026 11:42 AM,02/09/2026 11:42 AM,02/09/2026 12:15 PM,Student reported a two vehicle crash with no injuries,LOWER OLMSTED WEST LOT - HARRISBURG,2026-02-18 21:43:32,Harrisburg
 232,26HB00064,13,02/09/2026 04:00 AM,02/09/2026 03:57 AM,02/09/2026 04:10 AM,Employee reported a fire alarm activation,CONOY HOUSE,2026-02-18 21:43:32,Harrisburg
-245,26HB00063,13,02/08/2026 10:00 PM,02/08/2026 10:00 PM,02/08/2026 10:30 PM,Student reported being harassed,UNKNOWN LOCATION,2026-02-18 21:43:32,Harrisburg
 253,26HB00062,13,02/08/2026 11:20 AM,02/08/2026 11:20 AM,02/09/2026 11:40 AM,Student reported a concern for another student,OLMSTED BUILDING,2026-02-18 21:43:32,Harrisburg
 299,26HB00060,13,02/07/2026 12:30 AM,02/07/2026 12:30 AM,02/07/2026 01:40 AM,Assisted an outside law enforcement agency with an investigation,W MAIN ST & N CATHERINE ST,2026-02-18 21:43:32,Harrisburg
 305,26HB00059,13,02/06/2026 10:01 PM,02/06/2026 09:00 PM,02/06/2026 09:30 PM,"Student reported the odor of marijuana, origin not located",MAHANOY HOUSE,2026-02-18 21:43:32,Harrisburg
@@ -16,7 +15,6 @@ id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,natur
 461,26HB00045,13,02/02/2026 11:46 AM,08/18/2025 12:00 AM,02/02/2026 10:34 AM,Employee reported a concern for another student,STUDENT ENRICHMENT CENTER,2026-02-18 21:43:32,Harrisburg
 476,26HB00038,13,02/02/2026 12:02 AM,02/02/2026 12:00 AM,02/02/2026 12:37 AM,Employee requested assistance with a civil matter,MAHANOY HOUSE,2026-02-18 21:43:32,Harrisburg
 482,26HB00037,13,02/01/2026 05:25 PM,12/18/2025 03:30 PM,02/01/2026 06:00 PM,Students reported being harassed,JUNIATA HOUSE,2026-02-18 21:43:32,Harrisburg
-549,26HB00035,13,01/30/2026 12:07 PM,12/13/2025 12:00 AM,12/13/2025 11:59 PM,Employee reported a concern for another student,WOODLAND APPARTMENTS,2026-02-18 21:43:32,Harrisburg
 621,26HB00026,13,01/28/2026 10:35 AM,01/27/2026 03:43 PM,01/27/2026 04:47 PM,Student requested assistance with a personal matter,CAPITAL UNION BUILDING,2026-02-18 21:43:32,Harrisburg
 682,26HB00025,13,01/26/2026 12:55 PM,01/26/2026 12:55 PM,,Assisted an outside law enforcement agency with an investigation,SPRING ST,2026-02-18 21:43:32,Harrisburg
 698,26HB00023,13,01/25/2026 10:44 AM,01/25/2026 10:40 AM,01/25/2026 11:10 AM,Assisted the ambulance with a medical emergency,SHERMAN HOUSE,2026-02-18 21:43:32,Harrisburg

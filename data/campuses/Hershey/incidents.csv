@@ -1,4 +1,4 @@
-id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,campus
+id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,final_campus
 38,PSHI-2026-02-I-133881,2,02/15/2026 07:12 PM,02/15/2026 06:21 PM,,Assisted clinical staff with agitated patient.,Hershey - Dispatched To: HMC - Main Hospital > HMC - Main Hospital,2026-02-18 21:43:32,Hershey
 41,PSHI-2026-02-I-133879,2,02/15/2026 03:44 PM,02/15/2026 03:03 PM,,Assisted clinical staff with visitor issue.,Hershey - Dispatched To: HMC - Emergency Department > HMC - Emergency Department,2026-02-18 21:43:32,Hershey
 43,PSHI-2026-02-I-133876,2,02/15/2026 02:14 PM,02/15/2026 11:40 AM,,,Hershey - Dispatched To: HMC - Main Hospital - 1 - Security Operations Center > HMC - Main Hospital - 1 - Security Operations Center,2026-02-18 21:43:32,Hershey
@@ -16,6 +16,7 @@ id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,natur
 65,PSHI-2026-02-I-133847,2,02/14/2026 05:52 PM,02/14/2026 04:45 PM,,Assisted clinical staff with agitated patient.,Hershey - Dispatched To: HMC - Children's Hospital - 3 > HMC - Children's Hospital - 3,2026-02-18 21:43:32,Hershey
 66,PSHI-2026-02-I-133842,2,02/14/2026 03:06 PM,02/14/2026 02:51 PM,,Assisted clinical staff with agitated patient.,Hershey - Dispatched To: HMC - Emergency Department > HMC - Emergency Department,2026-02-18 21:43:32,Hershey
 68,PSHI-2026-02-I-133840,2,02/14/2026 02:35 PM,02/14/2026 02:21 PM,,,Hershey - Dispatched To: HMC - Main Hospital - 1 - Cashier's Office > HMC - Main Hospital - 1 - Cashier's Office,2026-02-18 21:43:32,Hershey
+70,2026-00002005,2,02/14/2026 12:32 PM,02/14/2026 12:25 PM,02/14/2026 12:32 PM,Student reported the theft of unsecured personal property,CHEMICAL AND BIOMEDICAL ENGINEERING BLDG,2026-02-18 21:43:32,Hershey
 74,PSHI-2026-02-I-133831,2,02/14/2026 10:13 AM,02/14/2026 10:04 AM,,,Hershey - Dispatched To: HMC - Centerview Parking Garage > HMC - Centerview Parking Garage,2026-02-18 21:43:32,Hershey
 75,PSHI-2026-02-I-133830,2,02/14/2026 09:46 AM,02/14/2026 09:10 AM,,,Hershey - Dispatched To: HMC - Main Hospital - 3 - Acute Care > HMC - Main Hospital - 3 - Acute Care,2026-02-18 21:43:32,Hershey
 77,PSHI-2026-02-I-133827,2,02/14/2026 09:25 AM,02/14/2026 09:21 AM,,Assisted staff with stolen property.,Hershey - Dispatched To: HMC - Main Hospital - 1 - Security Operations Center > HMC - Main Hospital - 1 - Security Operations Center,2026-02-18 21:43:32,Hershey
@@ -126,6 +127,7 @@ id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,natur
 319,PSHI-2026-02-I-133496,2,02/06/2026 02:26 PM,02/06/2026 01:37 PM,,Assisted clinical staff with agitated patient.,Hershey - Dispatched To: HMC - Emergency Department > HMC - Emergency Department,2026-02-18 21:43:32,Hershey
 324,PSHI-2026-02-I-133491,2,02/06/2026 12:27 PM,02/05/2026 07:27 PM,,Vendor and visitor issue resolved.,Hershey - Dispatched To: HMC - Children's Hospital > HMC - Children's Hospital,2026-02-18 21:43:32,Hershey
 328,PSHI-2026-02-I-133486,2,02/06/2026 09:23 AM,02/06/2026 09:12 AM,,Assisted clinical staff with agitated patient.,Hershey - Dispatched To: HMC - Emergency Department > HMC - Emergency Department,2026-02-18 21:43:32,Hershey
+332,26UP00608,1,02/06/2026 07:38 AM,02/06/2026 07:38 AM,02/06/2026 08:30 AM,Visitor reported a two vehicle crash with no injuries,HOSPITAL DR,2026-02-18 21:43:32,Hershey
 333,PSHI-2026-02-I-133481,2,02/06/2026 05:24 AM,02/06/2026 05:13 AM,,Assisted clinical staff with agitated patient.,Hershey - Dispatched To: HMC - Main Hospital > HMC - Main Hospital,2026-02-18 21:43:32,Hershey
 334,PSHI-2026-02-I-133479,2,02/06/2026 04:36 AM,02/06/2026 03:50 AM,,Visitor medical emergency.,Hershey - Dispatched To: HMC - Emergency Department > HMC - Emergency Department,2026-02-18 21:43:32,Hershey
 337,PSHI-2026-02-I-133477,2,02/06/2026 02:09 AM,02/06/2026 12:30 AM,,Assisted Law Enforcement with an intrusion alarm that was set off by cleaning crew.,Hershey - Dispatched To: HMC - 15 Hope Drive - HOSC > HMC - 15 Hope Drive - HOSC,2026-02-18 21:43:32,Hershey
@@ -289,7 +291,7 @@ id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,natur
 814,PSHI-2026-01-I-132935,2,01/21/2026 05:11 PM,01/21/2026 05:04 PM,,Received court documents.,Hershey - Dispatched To: HMC - Main Hospital > HMC - Main Hospital,2026-02-18 21:43:32,Hershey
 816,PSHI-2026-01-I-132934,2,01/21/2026 04:39 PM,01/21/2026 12:35 PM,,Assisted clinical staff with agitated patient.,Hershey - Dispatched To: HMC - Children's Hospital > HMC - Children's Hospital,2026-02-18 21:43:32,Hershey
 818,PSHI-2026-01-I-132930,2,01/21/2026 04:02 PM,01/21/2026 03:46 PM,,Assisted clinical staff with trauma patient.,Hershey - Dispatched To: HMC - Emergency Department > HMC - Emergency Department,2026-02-18 21:43:32,Hershey
-824,PSHI-2026-01-I-132923,2,01/21/2026 11:11 AM,01/21/2026 12:35 PM,,Minor crash on campus.,Hershey - Dispatched To: HMC - University Drive Roadway > HMC - University Drive Roadway,2026-02-18 21:43:32,Hershey
+825,26UP00304,1,01/21/2026 10:18 AM,01/20/2026 12:30 PM,01/21/2026 05:30 AM,Employee requested assistance with an administrative matter,"ANIMAL, VETERINARY, AND BIOMEDICAL SCIENCES BUILDING",2026-02-18 21:43:32,Hershey
 826,PSHI-2026-01-I-132922,2,01/21/2026 10:14 AM,01/21/2026 10:12 AM,,Received court documents.,Hershey - Reported Location: HMC - Main Hospital - 7 - PSCI,2026-02-18 21:43:32,Hershey
 829,PSHI-2026-01-I-132912,2,01/21/2026 02:37 AM,01/21/2026 02:11 AM,,Assisted clinical staff with agitated visitor.,Hershey - Dispatched To: HMC - Emergency Department > HMC - Emergency Department,2026-02-18 21:43:32,Hershey
 831,PSHI-2026-01-I-132910,2,01/20/2026 11:26 PM,01/20/2026 10:51 PM,,Assisted law enforcement with access to patient.,Hershey - Dispatched To: HMC - Main Hospital - 7 - PSCI > HMC - Main Hospital - 7 - PSCI,2026-02-18 21:43:32,Hershey
@@ -361,6 +363,7 @@ id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,natur
 1016,PSHI-2026-01-I-132662,2,01/14/2026 10:44 PM,01/14/2026 10:30 PM,,Assisted HR with investigation.,Hershey - Reported Location: HMC - Main Hospital - 1 - South Entrance\Chapel,2026-02-18 21:43:32,Hershey
 1021,PSHI-2026-01-I-132658,2,01/14/2026 08:40 PM,01/14/2026 07:27 PM,,Assisted clinical staff with agitated patient.,Hershey - Dispatched To: HMC - Children's Hospital > HMC - Children's Hospital,2026-02-18 21:43:32,Hershey
 1027,PSHI-2026-01-I-132654,2,01/14/2026 06:09 PM,01/14/2026 05:35 PM,,Assisted clinical staff with an agitated patient.,Hershey - Dispatched To: HMC - Children's Hospital - 6 > HMC - Children's Hospital - 6,2026-02-18 21:43:32,Hershey
+1031,26UP00145,1,01/14/2026 05:22 PM,01/14/2026 05:22 PM,01/14/2026 06:30 PM,Student reported unsafe conditions,CHEMICAL AND BIOMEDICAL ENGINEERING BLDG,2026-02-18 21:43:32,Hershey
 1032,PSHI-2026-01-I-132651,2,01/14/2026 05:17 PM,01/14/2026 12:32 PM,,Disposed of item in property.,Hershey - Dispatched To: HMC - Main Hospital - 1 - Security Operations Center > HMC - Main Hospital - 1 - Security Operations Center,2026-02-18 21:43:32,Hershey
 1033,PSHI-2026-01-I-132650,2,01/14/2026 04:58 PM,01/14/2026 04:32 PM,,Assisted clinical staff with an agitated patient.,Hershey - Dispatched To: HMC - Main Hospital - 4 - Acute Care > HMC - Main Hospital - 4 - Acute Care,2026-02-18 21:43:32,Hershey
 1036,PSHI-2026-01-I-132649,2,01/14/2026 04:21 PM,01/14/2026 03:31 PM,,Secured found item.,Hershey - Dispatched To: HMC - Main Hospital > HMC - Main Hospital,2026-02-18 21:43:32,Hershey
@@ -477,7 +480,6 @@ id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,natur
 1243,PSHI-2026-01-I-132195,2,01/03/2026 02:26 PM,01/03/2026 02:06 PM,,Assisted patient with found property.,Hershey - Dispatched To: HMC - Main Hospital - 1 - Gift Shop > HMC - Main Hospital - 1 - Gift Shop,2026-02-18 21:43:32,Hershey
 1246,PSHI-2026-01-I-132194,2,01/03/2026 01:36 PM,01/03/2026 12:52 PM,,Assisted law enforcement with access to patient.,Hershey - Dispatched To: HMC - Children's Hospital - 4 - PIMCU > HMC - Children's Hospital - 4 - PIMCU,2026-02-18 21:43:32,Hershey
 1248,PSHI-2026-01-I-132182,2,01/03/2026 06:20 AM,01/02/2026 04:22 PM,,Assisted clinical staff with agitated patient.,Hershey - Dispatched To: HMC - Main Hospital - 1 - Main Entrance\Valet > HMC - Main Hospital - 1 - Main Entrance\Valet,2026-02-18 21:43:32,Hershey
-1249,PSHI-2026-01-I-132181,2,01/03/2026 04:44 AM,01/03/2026 04:15 AM,,“Assisted clinical staff with visitor problem.”,Hershey - Reported Location: HMC - Main Hospital - 3 - Acute Care - 500 University Dr Hershey PA USA,2026-02-18 21:43:32,Hershey
 1250,PSHI-2026-01-I-132178,2,01/03/2026 01:18 AM,01/03/2026 12:26 AM,,Assisted visitor with information.,Hershey - Dispatched To: HMC - Parking Lot > HMC - Parking Lot,2026-02-18 21:43:32,Hershey
 1252,PSHI-2026-01-I-132169,2,01/02/2026 04:33 PM,,,Assisted clinical staff with agitated patient.,Hershey - Dispatched To: HMC - Emergency Department > HMC - Emergency Department,2026-02-18 21:43:32,Hershey
 1254,PSHI-2026-01-I-132168,2,01/02/2026 02:47 PM,01/02/2026 02:25 PM,,Visitor fall.,Hershey - Dispatched To: HMC - Main Hospital > HMC - Main Hospital,2026-02-18 21:43:32,Hershey
