@@ -1,4 +1,4 @@
-id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,campus
+id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,final_campus
 4,26ALtemp00008,3,02/17/2026 08:47 PM,02/17/2026 07:05 PM,02/17/2026 08:47 PM,Employee reported a concern for another student,Slep Student Center,2026-02-18 21:43:32,Altoona
 12,26ALtemp00007,3,02/17/2026 01:30 PM,02/17/2026 01:30 PM,,Employee reported a two vehicle crash with no injuries,Slep Lot,2026-02-18 21:43:32,Altoona
 15,26ALtemp00006,3,02/17/2026 09:20 AM,02/17/2026 09:20 AM,,Student requested assistance with a personal matter,Poplar Building,2026-02-18 21:43:32,Altoona
@@ -71,6 +71,7 @@ id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,natur
 1241,26AL00003,3,01/03/2026 06:51 PM,01/03/2026 06:51 PM,01/03/2026 07:25 PM,Assisted an outside law enforcement agency with an investigation,W 14TH AVE,2026-02-18 21:43:32,Altoona
 1251,26AL00002,3,01/02/2026 09:57 PM,01/02/2026 09:57 PM,01/02/2026 10:30 PM,Assisted an outside law enforcement agency with an investigation,6TH AVE,2026-02-18 21:43:32,Altoona
 1256,26AL00001,3,01/02/2026 02:22 PM,01/02/2026 02:22 PM,01/02/2026 02:30 PM,Assisted an outside law enforcement agency with an investigation,POPLAR BLDG,2026-02-18 21:43:32,Altoona
+1374,25AL00643,3,12/21/2025 08:48 PM,12/21/2025 08:48 PM,12/21/2025 09:07 PM,Assisted an outside law enforcement agency with an investigation,25TH AVE & JUNIATA GAP RD,2026-02-18 21:43:32,Altoona
 1464,26AL00079,3,02/18/2026 11:00 AM,02/13/2026 01:37 AM,02/13/2026 02:44 AM,Employee reported a student being harassed,OAK HALL,2026-02-21 20:58:08,Altoona
 1473,26AL00078,3,02/17/2026 06:47 PM,02/17/2026 06:47 PM,,Student reported suspicious activity,SLEP STUDENT CENTER,2026-02-21 20:58:08,Altoona
 1475,26AL00077,3,02/17/2026 01:30 PM,02/17/2026 01:30 PM,,Employee reported a two vehicle crash with no injuries,SLEP LOT - YSL - ALTOONA,2026-02-21 20:58:08,Altoona

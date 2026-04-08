@@ -1,4 +1,4 @@
-id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,campus
+id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,final_campus
 21,26BKTemp0004,4,02/16/2026 09:16 PM,02/16/2026 09:16 PM,02/16/2026 09:35 PM,Employee reported a visitor trespassing in a residence hall,LAUREL HALL,2026-02-18 21:43:32,Berks
 23,26BKTemp0003,4,02/16/2026 03:30 PM,02/16/2026 03:30 PM,02/16/2026 04:30 PM,Employee reported a fire drill alarm,PEPPERWOOD HALL,2026-02-18 21:43:32,Berks
 73,26BKTemp0002,4,02/14/2026 11:07 AM,02/14/2026 10:37 AM,02/14/2026 10:47 AM,Assisted an outside law enforcement agency with an investigation,HILLVALE AVE & SPOHN RD,2026-02-18 21:43:32,Berks

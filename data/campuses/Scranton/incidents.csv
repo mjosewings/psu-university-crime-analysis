@@ -1,0 +1,6 @@
+id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,final_campus
+394,26WS00004,22,02/04/2026 12:34 PM,02/04/2026 12:30 PM,02/04/2026 01:06 PM,Assisted the ambulance with a medical emergency,STUDENT STUDY - LEARNING CENTER,2026-02-18 21:43:32,Scranton
+962,26WS00001,22,01/16/2026 10:00 AM,01/16/2026 10:00 AM,01/16/2026 11:00 AM,Employee requested assistance with an administrative matter,MULTI-PURPOSE BUILDING,2026-02-18 21:43:32,Scranton
+1435,26WS00008,22,02/19/2026 03:00 PM,01/30/2026 07:00 AM,02/18/2026 04:53 PM,Employee reported damage to University property,BUSINESS BUILDING,2026-02-21 20:58:08,Scranton
+1477,26WS00007,22,02/17/2026 11:55 AM,02/17/2026 11:49 AM,02/17/2026 11:50 AM,Student reported damage to their privately owned vehicle,BB02 LOT - SCRANTON,2026-02-21 20:58:08,Scranton
+1501,26WS00006,22,02/13/2026 10:20 AM,02/13/2026 10:20 AM,02/13/2026 11:30 AM,Employee requested assistance in locating another employee,CAMAC AVE,2026-02-21 20:58:08,Scranton
