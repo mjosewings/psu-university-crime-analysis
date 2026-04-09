@@ -1,6 +1,0 @@
-id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,date,year,month,month_name,hour,day_of_week,is_weekend,time_bucket,final_campus
-211,26YK00006,23,02/09/2026 05:12 PM,2025-09-14 00:00:00,,Employee reported a student was indecently assaulted by a known person at a University sponsored location,HESHEYPARK DR,2026-02-18 21:43:32,2025-09-14,2025,9,September,0,Sunday,True,Late Night,York
-617,26YK00004,23,01/28/2026 12:00 PM,2026-01-22 00:01:00,01/23/2026 12:01 AM,Student requested assistance with a personal matter,E BOUNDARY AVE,2026-02-18 21:43:32,2026-01-22,2026,1,January,0,Thursday,False,Late Night,York
-752,26YK00003,23,01/23/2026 06:23 PM,2026-01-23 18:00:00,01/23/2026 06:23 PM,Visitor reported a concern for other persons,EDGECOMB AVE,2026-02-18 21:43:32,2026-01-23,2026,1,January,18,Friday,False,Evening,York
-764,26YK00002,23,01/23/2026 11:09 AM,2026-01-23 10:03:00,01/23/2026 10:05 AM,Student reported a two vehicle crash with no injuries,UPPER PULLO CENTER PARKING LOT - YORK,2026-02-18 21:43:32,2026-01-23,2026,1,January,10,Friday,False,Morning,York
-1074,26YK00001,23,01/13/2026 08:20 AM,2026-01-10 09:00:00,01/10/2026 09:30 AM,Employee requested assistance with an administrative matter,RUHL STUDENT/COMMUNITY CENTER,2026-02-18 21:43:32,2026-01-10,2026,1,January,9,Saturday,True,Morning,York
