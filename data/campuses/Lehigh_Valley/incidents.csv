@@ -1,0 +1,6 @@
+id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,date,year,month,month_name,hour,day_of_week,is_weekend,time_bucket,final_campus
+352,26LV00003,16,02/05/2026 04:15 PM,2026-02-05 09:00:00,02/05/2026 11:00 AM,Student reported a hit and run vehicle crash,STUDENT PARKING LOT - LEHIGH VALLEY,2026-02-18 21:43:32,2026-02-05,2026,2,February,9,Thursday,False,Morning,Lehigh_Valley
+796,26LV00002,16,01/22/2026 08:28 AM,2006-01-21 19:26:00,,Employee reported a concern for a student,LEHIGH VALLEY BLDG,2026-02-18 21:43:32,2006-01-21,2006,1,January,19,Saturday,True,Evening,Lehigh_Valley
+822,26LV00001,16,01/21/2026 01:00 PM,2026-01-21 13:00:00,,Assisted a student with a personal matter,LEHIGH VALLEY BLDG,2026-02-18 21:43:32,2026-01-21,2026,1,January,13,Wednesday,False,Afternoon,Lehigh_Valley
+1461,26LV00004,16,02/18/2026 12:15 PM,2026-02-17 00:00:00,,Employee reported a concern for another student,LEHIGH VALLEY BLDG,2026-02-21 20:58:08,2026-02-17,2026,2,February,0,Tuesday,False,Late Night,Lehigh_Valley
+1647,26LV00005,16,02/25/2026 12:58 PM,2026-02-25 12:58:00,02/25/2026 01:20 PM,Employee reported a fire alarm activation,LEHIGH VALLEY BLDG,2026-02-26 23:59:30,2026-02-25,2026,2,February,12,Wednesday,False,Afternoon,Lehigh_Valley

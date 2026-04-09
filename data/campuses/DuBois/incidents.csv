@@ -1,0 +1,2 @@
+id,incident_number,campus_id,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,date,year,month,month_name,hour,day_of_week,is_weekend,time_bucket,final_campus
+998,26DS00001,9,01/15/2026 12:16 PM,2026-01-15 12:16:00,01/15/2026 12:22 PM,Visitor requested assistance with a disabled vehicle,N 6TH ST & E DUBOIS AVE,2026-02-18 21:43:32,2026-01-15,2026,1,January,12,Thursday,False,Afternoon,DuBois
