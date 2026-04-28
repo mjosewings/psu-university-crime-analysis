@@ -1,0 +1,21 @@
+time_bucket,day_type,nature_short,count
+Afternoon,Weekday,Assisted clinical staff with agitated patient.,43
+Late Night,Weekday,Assisted clinical staff with agitated patient.,35
+Late Night,Weekend,Assisted clinical staff with agitated patient.,28
+Late Night,Weekday,Assisted clinical staff with an agitated patient.,21
+Morning,Weekday,Assisted clinical staff with agitated patient.,21
+Afternoon,Weekday,Assisted an outside law enforcement agency with an inve,21
+Morning,Weekday,Assisted an outside law enforcement agency with an inve,19
+Afternoon,Weekday,Employee reported a fire alarm activation,16
+Afternoon,Weekend,Assisted clinical staff with agitated patient.,15
+Late Night,Weekday,Employee reported a fire alarm activation,14
+Morning,Weekday,Employee reported a parking concern,13
+Afternoon,Weekday,Employee reported suspicious activity,13
+Evening,Weekday,Assisted clinical staff with agitated patient.,13
+Afternoon,Weekday,Assisted clinical staff with an agitated patient.,12
+Evening,Weekday,Employee reported a fire alarm activation,12
+Evening,Weekday,Assisted an outside law enforcement agency with an inve,12
+Afternoon,Weekend,Employee reported a fire alarm activation,11
+Morning,Weekday,Employee requested assistance with an administrative ma,11
+Evening,Weekend,Assisted an outside law enforcement agency with an inve,11
+Afternoon,Weekday,Student reported being harassed,11
