@@ -1,0 +1,20 @@
+time_bucket,day_type,nature_short,count
+Morning,Weekday,Assisted an outside law enforcement agency with an inve,2
+Afternoon,Weekday,Assisted an outside law enforcement agency with an inve,2
+Morning,Weekday,Assisted the ambulance with a medical emergency,1
+Morning,Weekend,Employee reported a two vehicle crash with no injuries,1
+Afternoon,Weekday,Assisted a student with a personal matter,1
+Afternoon,Weekday,Employee reported a hit and run vehicle crash,1
+Afternoon,Weekday,Employee reported a parking concern,1
+Afternoon,Weekday,Student requested assistance with a personal matter,1
+Afternoon,Weekend,Employee reported a University policy violation,1
+Afternoon,Weekend,Employee reported accidental damage to University prope,1
+Afternoon,Weekend,Student requested assistance with a personal matter,1
+Evening,Weekday,Assisted an outside law enforcement agency with an inve,1
+Evening,Weekday,Student reported the loss or theft of their unattended ,1
+Evening,Weekend,Assisted an outside law enforcement agency with an inve,1
+Late Night,Weekday,"Resident Assistant reported the odor of marijuana, orig",1
+Late Night,Weekend,Assisted a student with a personal matter,1
+Late Night,Weekend,Assisted an outside law enforcement agency with an inve,1
+Late Night,Weekend,Employee reported an alarm activation,1
+Late Night,Weekend,Student requested assistance with a civil matter,1

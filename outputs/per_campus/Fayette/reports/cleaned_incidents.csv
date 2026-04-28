@@ -1,0 +1,2 @@
+id,incident_number,campus_id,final_campus,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,date,year,month,month_name,hour,day_of_week,is_weekend,time_bucket
+784,26FE00001,10,Fayette,01/22/2026 03:38 PM,01/22/2020 12:00 AM,01/23/2026 11:47 AM,Employees reported being harassed,COAL AND COKE HERATIGE MUSEUM,2026-02-18 21:43:32,2026-01-22,2026,1,January,15,Thursday,False,Afternoon

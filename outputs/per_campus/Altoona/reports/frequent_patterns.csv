@@ -1,0 +1,21 @@
+time_bucket,day_type,nature_short,count
+Afternoon,Weekday,Assisted an outside law enforcement agency with an inve,6
+Evening,Weekend,Assisted an outside law enforcement agency with an inve,6
+Afternoon,Weekend,Assisted an outside law enforcement agency with an inve,5
+Morning,Weekday,Assisted an outside law enforcement agency with an inve,5
+Afternoon,Weekday,Employee reported a parking concern,3
+Afternoon,Weekday,Employee reported a two vehicle crash with no injuries,3
+Morning,Weekday,Employee reported a parking concern,3
+Evening,Weekday,Assisted an outside law enforcement agency with an inve,3
+Afternoon,Weekday,Employee reported a fire alarm activation,3
+Afternoon,Weekday,Employee reported suspicious activity,3
+Morning,Weekend,Employee reported damage to University property,2
+Late Night,Weekday,Employee reported a fire alarm activation,2
+Late Night,Weekday,Assisted the ambulance with a medical emergency,2
+Evening,Weekday,Employee reported a fire alarm activation,2
+Afternoon,Weekend,Visitor reported a concern for a student,2
+Late Night,Weekend,Employee reported a fire alarm activation,2
+Late Night,Weekend,Assisted an outside law enforcement agency with an inve,2
+Evening,Weekend,Student reported being physically assaulted by a known ,2
+Afternoon,Weekday,Student requested assistance with a personal matter,2
+Morning,Weekday,Employee reported a hit and run vehicle crash,2

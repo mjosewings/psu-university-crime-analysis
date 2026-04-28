@@ -1,0 +1,19 @@
+time_bucket,day_type,nature_short,count
+Afternoon,Weekday,Employee reported damage to University property,2
+Morning,Weekday,Employee reported a concern for another person,1
+Morning,Weekday,Employee reported concern for another person,1
+Morning,Weekday,Employee reported damage to University property,1
+Afternoon,Weekday,Employee reported a vehicle crash with no injuries,1
+Afternoon,Weekday,Employee reported unsafe conditions,1
+Afternoon,Weekday,Student reported a two vehicle crash with no injuries,1
+Afternoon,Weekday,Student reported the theft of their unattended personal,1
+Afternoon,Weekend,Employee reported a concern for a student,1
+Afternoon,Weekend,Employee reported suspicious activity,1
+Afternoon,Weekend,Visitor reported suspicious activity,1
+Evening,Weekday,Assisted the ambulance with a medical emergency,1
+Evening,Weekday,Employee reported a fire alarm activation,1
+Evening,Weekend,Student reported a suspicious odor,1
+Late Night,Weekday,Employee reported a concern for a student,1
+Late Night,Weekday,Student reported a University policy violation,1
+Late Night,Weekday,Student reported a concern for another student,1
+Late Night,Weekend,Assisted the ambulance with a medical emergency,1

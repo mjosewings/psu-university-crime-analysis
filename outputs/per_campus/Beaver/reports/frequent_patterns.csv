@@ -1,0 +1,21 @@
+time_bucket,day_type,nature_short,count
+Morning,Weekday,Employee reported a parking concern,7
+Morning,Weekend,Assisted an outside law enforcement agency with an inve,3
+Afternoon,Weekday,Student reported being harassed,2
+Afternoon,Weekday,Employee reported a fire alarm activation,2
+Afternoon,Weekday,Visitor reported a parking concern,2
+Morning,Weekday,Employee reported a burglary alarm activation,1
+Morning,Weekday,Student reported the theft of their unsecured/unattende,1
+Morning,Weekday,Visitor reported a concern for a student,1
+Morning,Weekday,Employee requested assistance in locating a student,1
+Morning,Weekday,Employee reported a suspicious item,1
+Afternoon,Weekday,Assisted the ambulance with a medical emergency,1
+Afternoon,Weekday,Assisted an outside law enforcement agency with an inve,1
+Afternoon,Weekday,Employee reported a parking concern,1
+Afternoon,Weekday,Employee reported a fire drill alarm,1
+Afternoon,Weekday,Employee reported the loss or theft of their unattended,1
+Afternoon,Weekday,Received this department's copy of a Protection From Ab,1
+Afternoon,Weekday,Student reported lost property,1
+Morning,Weekday,Employee reported parking concern,1
+Afternoon,Weekday,Student requested assistance with a personal matter,1
+Afternoon,Weekend,Employee reported a fire alarm activation,1

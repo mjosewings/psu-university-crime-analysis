@@ -1,0 +1,21 @@
+time_bucket,day_type,nature_short,count
+Afternoon,Weekday,Assisted clinical staff with agitated patient.,41
+Late Night,Weekday,Assisted clinical staff with agitated patient.,33
+Late Night,Weekend,Assisted clinical staff with agitated patient.,24
+Late Night,Weekday,Assisted clinical staff with an agitated patient.,19
+Morning,Weekday,Assisted clinical staff with agitated patient.,19
+Evening,Weekday,Assisted clinical staff with agitated patient.,13
+Afternoon,Weekend,Assisted clinical staff with agitated patient.,13
+Afternoon,Weekday,Assisted clinical staff with an agitated patient.,12
+Afternoon,Weekday,Assisted clinical staff with agitated visitor.,10
+Evening,Weekday,Assisted clinical staff with an agitated patient.,9
+Late Night,Weekday,Visitor mismatch to the sex offender registry.,9
+Afternoon,Weekday,Employee reported a fire alarm activation,8
+Afternoon,Weekend,Employee reported a fire alarm activation,7
+Evening,Weekend,Assisted clinical staff with agitated patient.,7
+Late Night,Weekday,Employee reported a fire alarm activation,6
+Morning,Weekday,Assisted clinical staff with an agitated patient.,6
+Evening,Weekday,Employee reported a fire alarm activation,5
+Afternoon,Weekday,Visitor fall.,5
+Late Night,Weekend,Assisted clinical staff with an agitated patient.,5
+Late Night,Weekday,Assisted clinical staff with agitated visitor.,5

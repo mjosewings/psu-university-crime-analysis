@@ -1,0 +1,21 @@
+time_bucket,day_type,nature_short,count
+Morning,Weekday,Employee reported a fire alarm activation,3
+Evening,Weekday,Employee reported a fire alarm activation,3
+Late Night,Weekday,Employee reported an alarm activation,3
+Late Night,Weekday,Employee reported a fire alarm activation,2
+Evening,Weekday,Student reported suspicious activity,2
+Afternoon,Weekday,Employee reported a concern for a visitor,2
+Morning,Weekday,Student reported a two vehicle crash with no injuries,1
+Morning,Weekday,Visitor reported a traffic concern regarding a vehicle,1
+Morning,Weekend,Employee reported a fire alarm activation,1
+Morning,Weekday,Visitor reported a two vehicle crash with no injuries,1
+Morning,Weekend,Employee reported a parking concern,1
+Morning,Weekend,Employee reported a suspicious item,1
+Morning,Weekend,Visitor requested assistance in locating a student,1
+Afternoon,Weekday,Assisted the fire department with a reported fire,1
+Afternoon,Weekday,Employee reported a suspicious vehicle,1
+Afternoon,Weekday,Employee reported an alarm activation,1
+Afternoon,Weekday,Student reported being harassed,1
+Afternoon,Weekday,Student reported being physically assaulted by a known ,1
+Morning,Weekday,Employee reported a parking concern,1
+Morning,Weekday,Employee reported suspicious activity,1

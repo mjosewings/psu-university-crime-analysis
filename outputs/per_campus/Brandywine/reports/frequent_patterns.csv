@@ -1,0 +1,21 @@
+time_bucket,day_type,nature_short,count
+Late Night,Weekday,Employee reported an intrusion alarm activation,3
+Afternoon,Weekday,Assisted an outside law enforcement agency with an inve,2
+Morning,Weekday,Employee reported a parking concern,1
+Morning,Weekday,Employee reported accidental damage to University prope,1
+Morning,Weekday,Assisted the ambulance with a medical emergency,1
+Morning,Weekday,Employee reported a burglar alarm activation,1
+Morning,Weekday,Employee reported unsafe conditions,1
+Morning,Weekday,Employee reported suspicious activity,1
+Morning,Weekday,Student reported being harassed,1
+Morning,Weekday,Employee requested assistance with an administrative ma,1
+Morning,Weekday,Student reported they were indecently assaulted by a kn,1
+Morning,Weekday,Visitor  reported a one vehicle crash with no injuries,1
+Morning,Weekend,Student reported they were indecently assaulted by a kn,1
+Morning,Weekday,Student reported a fire alarm activation,1
+Afternoon,Weekday,Assisted the ambulance with a medical emergency,1
+Afternoon,Weekday,Employee reported a concern for another student,1
+Afternoon,Weekday,Employee reported a panic alarm activation,1
+Afternoon,Weekday,Employee reported a parking concern,1
+Afternoon,Weekday,Employee reported the loss of University property,1
+Afternoon,Weekday,Employee reported the theft of University property,1

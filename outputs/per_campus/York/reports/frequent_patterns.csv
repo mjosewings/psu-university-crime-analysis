@@ -1,0 +1,6 @@
+time_bucket,day_type,nature_short,count
+Morning,Weekday,Employee requested assistance with an administrative ma,1
+Morning,Weekday,Student reported a two vehicle crash with no injuries,1
+Afternoon,Weekday,Employee reported a student was indecently assaulted by,1
+Afternoon,Weekday,Student requested assistance with a personal matter,1
+Evening,Weekday,Visitor reported a concern for other persons,1

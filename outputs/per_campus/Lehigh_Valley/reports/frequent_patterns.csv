@@ -1,0 +1,6 @@
+time_bucket,day_type,nature_short,count
+Morning,Weekday,Employee reported a concern for a student,1
+Afternoon,Weekday,Assisted a student with a personal matter,1
+Afternoon,Weekday,Employee reported a concern for another student,1
+Afternoon,Weekday,Employee reported a fire alarm activation,1
+Afternoon,Weekday,Student reported a hit and run vehicle crash,1

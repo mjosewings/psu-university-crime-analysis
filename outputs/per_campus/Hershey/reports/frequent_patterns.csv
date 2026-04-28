@@ -1,0 +1,19 @@
+time_bucket,day_type,nature_short,count
+Morning,Weekday,Assisted an outside law enforcement agency with an inve,2
+Late Night,Weekday,Assisted an outside law enforcement agency with an inve,2
+Morning,Weekday,Employee reported a fire alarm activation,1
+Morning,Weekday,Employee requested assistance with a civil matter,1
+Morning,Weekend,Employee reported a fire alarm activation,1
+Morning,Weekday,Employee requested assistance with an administrative ma,1
+Afternoon,Weekday,Employee reported suspicious activity,1
+Afternoon,Weekend,Employee reported a fire alarm activation,1
+Evening,Weekday,Assisted a law enforcement agency with an investigation,1
+Afternoon,Weekday,Employee reported a fire alarm drill activation,1
+Evening,Weekday,Assisted an outside law enforcement agency with an inve,1
+Evening,Weekday,Employee reported a suspicious odor,1
+Evening,Weekday,Employee reported suspicious vehicle,1
+Evening,Weekday,Employee reported suspicious activity,1
+Evening,Weekday,Officers responded to a 911 hang-up with no voice conta,1
+Evening,Weekday,Student reported being harassed,1
+Late Night,Weekday,Assisted Law Enfoecement agency with an investigation,1
+Late Night,Weekday,Employee reported an intrusion alarm activation,1

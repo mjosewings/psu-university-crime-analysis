@@ -1,0 +1,2 @@
+id,incident_number,campus_id,final_campus,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,date,year,month,month_name,hour,day_of_week,is_weekend,time_bucket
+556,26GA00001,11,Greater Allegheny,01/30/2026 04:32 AM,01/30/2026 04:32 AM,01/30/2026 04:48 AM,Employee reported a fire alarm activation,RESIDENCE HALL,2026-02-18 21:43:32,2026-01-30,2026,1,January,4,Friday,False,Late Night

@@ -1,0 +1,2 @@
+id,incident_number,campus_id,final_campus,reported_datetime,occurred_start,occurred_end,nature_of_incident,location,created_at,date,year,month,month_name,hour,day_of_week,is_weekend,time_bucket
+432,26GV00001,12,Great Valley,02/03/2026 11:49 AM,01/29/2026 12:00 AM,,Visitor observed urinating in public,GREAT VALLEY GRADUATE CENTER,2026-02-18 21:43:32,2026-02-03,2026,2,February,11,Tuesday,False,Morning
